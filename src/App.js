@@ -28,6 +28,8 @@ function App() {
         <p>----------------------------------</p>
         <p>chapter</p>
         <p>info anout the mint</p>
+
+        <p>test</p>
       </div>
     </>
   );
