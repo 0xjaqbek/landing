@@ -10,8 +10,9 @@ const HomeNewUser = () => {
   };
 
   const handleSaveName = () => {
-    localStorage.setItem("userName", inputValue);
-    setUserName(inputValue);
+    const correctedInputValue = inputValue.trim().substring(0, 10);
+    localStorage.setItem("userName", correctedInputValue);
+    setUserName(correctedInputValue);
   };
 
   return (
