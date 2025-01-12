@@ -5,12 +5,12 @@ const usePageVisitTracking = (locationPath) => {
     const lastVisitedPage = localStorage.getItem("lastVisitedPage");
 
     if (lastVisitedPage) {
-      console.log("Last visited page:", lastVisitedPage);
+      console.log("Last visited page: (hook)", lastVisitedPage);
     } else {
-      console.log("No last visited page found.");
+      console.log("No last visited page found. (hook) ");
     }
 
-    localStorage.setItem("lastVisitedPage", locationPath);
+    localStorage.setItem("lastVisitedPage (hook)", locationPath);
   }, []);
 };
 
