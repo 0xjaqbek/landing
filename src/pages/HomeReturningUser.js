@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 
 const HomeReturningUser = (props) => {
-  const [userName, setUserName] = props.userName;
+  const [name, setName] = useState(props.userName);
 
   return (
     <div>
-      <h2>Welcome back, {userName}!</h2>
+      <h2>Welcome back, {name}!</h2>
 
       <h3>
         As you've realized, our timelines haven’t fully aligned yet, which is
