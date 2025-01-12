@@ -1,15 +1,15 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Chapter1 from "./pages/Chapter1";
-import Chapter2 from "./pages/Chapter2";
-import Chapter3 from "./pages/Chapter3";
-import Chapter4 from "./pages/Chapter4";
-import Chapter5 from "./pages/Chapter5";
-import Chapter6 from "./pages/Chapter6";
-import Chapter7 from "./pages/Chapter7";
-import Chapter8 from "./pages/Chapter8";
-import NotFound from "./pages/NotFound";
+import Home from "./Pages/Home";
+import Chapter1 from "./Pages/Chapter1";
+import Chapter2 from "./Pages/Chapter2";
+import Chapter3 from "./Pages/Chapter3";
+import Chapter4 from "./Pages/Chapter4";
+import Chapter5 from "./Pages/Chapter5";
+import Chapter6 from "./Pages/Chapter6";
+import Chapter7 from "./Pages/Chapter7";
+import Chapter8 from "./Pages/Chapter8";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
@@ -31,30 +31,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <p>
-  It’s my pleasure to finally meet you. May I ask, how should I address
-  you?
-</p>
-<p>Tom, what a wonderful name!</p>
-<p>
-  As you've realized, our timelines haven’t fully aligned yet, which is
-  why we can’t have a live conversation just yet.{" "}
-</p>
-<p>
-  But don’t worry, I’ve managed to transcode some of my diaries so you
-  can tune in to my history.
-</p>
-<p>
-  And before you go, remember that you can find more information about
-  my universe by following my media.
-</p>
-<p>
-  And before you go, remember that you can find more information about
-  my universe by following my media.
-</p>
-<p>----------------------------------</p>
-<p>chapter</p>
-<p>info anout the mint</p> */
-}

@@ -1,7 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+import usePageVisitTracking from "../CustomHooks/usePageVisitTracking"; // Adjust the import path
 
 const Chapter5 = () => {
+  usePageVisitTracking(useLocation().pathname);
+
   return (
     <div>
       <h1>Chapter 5: The Shattered Alliance</h1>

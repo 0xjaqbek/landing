@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+import usePageVisitTracking from "../CustomHooks/usePageVisitTracking"; // Adjust the import path
 
 const Home = () => {
+  const location = useLocation();
+  usePageVisitTracking(location.pathname);
+
   return (
     <div>
       <h1>Welcome to the Story</h1>

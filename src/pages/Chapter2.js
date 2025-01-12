@@ -1,7 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+import usePageVisitTracking from "../CustomHooks/usePageVisitTracking"; // Adjust the import path
 
 const Chapter2 = () => {
+  usePageVisitTracking(useLocation().pathname);
+
   return (
     <div>
       <h1>Rozdział 2: Odkrywając Nowe Światy</h1>
