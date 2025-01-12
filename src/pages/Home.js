@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import usePageVisitTracking from "../CustomHooks/usePageVisitTracking"; // Adjust the import path
 
 const Home = () => {
   usePageVisitTracking(useLocation().pathname);
+
+  const [userName, setUserName] = useState("");
+  const [inputValue, setInputValue] = useState("");
+
+  useEffect(() => {
+    const savedUserName = localStorage.getItem("userName");
+    if (savedUserName) {
+      setUserName(savedUserName);
+    }
+  }, []);
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleSave = () => {
+    const trimmedName = inputValue.substring(0, 12);
+    setUserName(trimmedName);
+    localStorage.setItem("userName", trimmedName);
+    setInputValue("");
+  };
 
   return (
     <div>
@@ -36,6 +57,22 @@ const Home = () => {
           <button>Chapter 8</button>
         </Link>
 
+        <p>----------------------------------</p>
+        <div>
+          {userName ? (
+            <h2>Hello, {userName}!</h2>
+          ) : (
+            <div>
+              <input
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="Enter your name"
+              />
+              <button onClick={handleSave}>Save Name</button>
+            </div>
+          )}
+        </div>
         <p>----------------------------------</p>
 
         <p>
