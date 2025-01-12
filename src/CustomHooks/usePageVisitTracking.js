@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const usePageVisitTracking = (location) => {
+const usePageVisitTracking = (locationPath) => {
   useEffect(() => {
     const lastVisitedPage = localStorage.getItem("lastVisitedPage");
 
@@ -10,7 +10,7 @@ const usePageVisitTracking = (location) => {
       console.log("No last visited page found.");
     }
 
-    localStorage.setItem("lastVisitedPage", location);
+    localStorage.setItem("lastVisitedPage", locationPath);
   }, []);
 };
 
