@@ -5,6 +5,8 @@ import usePageVisitTracking from "../CustomHooks/usePageVisitTracking"; // Adjus
 const Chapter1 = () => {
   usePageVisitTracking(useLocation().pathname);
 
+  console.log(localStorage);
+
   return (
     <div>
       <h1>Rozdział 1: Początek Przygody</h1>

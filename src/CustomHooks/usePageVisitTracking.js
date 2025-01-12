@@ -2,7 +2,6 @@ import { useEffect } from "react";
 
 const usePageVisitTracking = (location) => {
   useEffect(() => {
-    // Check if there's a last visited page stored in localStorage
     const lastVisitedPage = localStorage.getItem("lastVisitedPage");
 
     if (lastVisitedPage) {

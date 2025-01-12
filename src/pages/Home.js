@@ -3,8 +3,7 @@ import { useLocation, Link } from "react-router-dom";
 import usePageVisitTracking from "../CustomHooks/usePageVisitTracking"; // Adjust the import path
 
 const Home = () => {
-  const location = useLocation();
-  usePageVisitTracking(location.pathname);
+  usePageVisitTracking(useLocation().pathname);
 
   return (
     <div>
