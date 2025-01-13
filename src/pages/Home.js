@@ -1,3 +1,5 @@
+import "./page.css";
+
 import React, { useState, useEffect } from "react";
 import HomeNewUser from "./HomeNewUser";
 import HomeReturningUser from "./HomeReturningUser";

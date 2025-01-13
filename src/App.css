@@ -1,7 +1,10 @@
-.app {
-  background-color: bisque;
-}
-
 .app-main {
-  background-color: aquamarine;
+  margin: 100px 0 100px 0;
+  padding: 10px;
+  background-color: rgb(136, 210, 185);
+
+  width: min(100% - 30px, 600px);
+  margin-inline: auto;
+
+  height: 100%;
 }

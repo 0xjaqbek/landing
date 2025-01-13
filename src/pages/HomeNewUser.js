@@ -1,3 +1,5 @@
+import "./page.css";
+
 import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 
@@ -91,26 +93,26 @@ const HomeNewUser = () => {
 
   return (
     <>
+      <div></div>
       <div>
-        <input
-          type="text"
-          placeholder="Enter your name"
-          value={inputValue}
-          onChange={handleNameChange}
-        />
-        <button onClick={handleSaveName}>Save Name</button>
-      </div>
-      <div>----------</div>
-      <div>
-        <div>
+        <div className="message-box">
           {messages.map((message) => (
-            <div key={message.id}>
-              <div>{message.time}</div>
-              <div>{message.senderName}</div>
+            <div className="message" key={message.id}>
+              <div>
+                {message.senderName} {message.time}
+              </div>
+              <div></div>
+              <div>--------------</div>
               <div>{message.text}</div>
-              <div>----------</div>
             </div>
           ))}
+          <input
+            type="text"
+            placeholder="Enter your name"
+            value={inputValue}
+            onChange={handleNameChange}
+          />
+          <button onClick={handleSaveName}>Save Name</button>
         </div>
       </div>
     </>

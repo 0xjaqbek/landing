@@ -11,7 +11,43 @@ const Chapter1 = () => {
       <p>
         To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz wprowadzić
         treść rozdziału, np. tekst opisujący wstęp do Twojej historii lub
-        aplikacji.
+        aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.To jest pierwszy rozdział w Twojej aplikacji! Tutaj możesz
+        wprowadzić treść rozdziału, np. tekst opisujący wstęp do Twojej historii
+        lub aplikacji.
       </p>
 
       <h2>Co się wydarzy dalej?</h2>
