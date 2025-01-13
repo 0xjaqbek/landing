@@ -10,22 +10,28 @@ import Chapter6 from "./Pages/Chapter6";
 import Chapter7 from "./Pages/Chapter7";
 import Chapter8 from "./Pages/Chapter8";
 import NotFound from "./Pages/NotFound";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/chapter1" element={<Chapter1 />} />
-        <Route path="/chapter2" element={<Chapter2 />} />
-        <Route path="/chapter3" element={<Chapter3 />} />
-        <Route path="/chapter4" element={<Chapter4 />} />
-        <Route path="/chapter5" element={<Chapter5 />} />
-        <Route path="/chapter6" element={<Chapter6 />} />
-        <Route path="/chapter7" element={<Chapter7 />} />
-        <Route path="/chapter8" element={<Chapter8 />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Header />
+      <div className="app-main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/chapter1" element={<Chapter1 />} />
+          <Route path="/chapter2" element={<Chapter2 />} />
+          <Route path="/chapter3" element={<Chapter3 />} />
+          <Route path="/chapter4" element={<Chapter4 />} />
+          <Route path="/chapter5" element={<Chapter5 />} />
+          <Route path="/chapter6" element={<Chapter6 />} />
+          <Route path="/chapter7" element={<Chapter7 />} />
+          <Route path="/chapter8" element={<Chapter8 />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+      <Footer />
     </>
   );
 }
