@@ -76,7 +76,13 @@ const HomeReturningUser = (props) => {
     <div>
       <div className="message-box">
         {messages.map((message) => (
-          <div className="message" key={message.id}>
+          <div
+            className={`message ${
+              message.senderName === "Aria" ? "aria-message" : ""
+            }`}
+            key={message.id}
+          >
+            {" "}
             <div>
               {message.senderName} {message.time}
             </div>

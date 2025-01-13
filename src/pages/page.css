@@ -1,6 +1,10 @@
 .message-box {
   background-color: antiquewhite;
   padding: 2px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .message {
@@ -10,4 +14,10 @@
   width: 70%;
   border: 1px solid black;
   border-radius: 10px;
+  align-self: flex-end;
+}
+
+.aria-message {
+  background-color: rgb(212, 184, 208);
+  align-self: flex-start;
 }
