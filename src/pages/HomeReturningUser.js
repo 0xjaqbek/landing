@@ -78,7 +78,7 @@ const HomeReturningUser = (props) => {
   }, []);
 
   return (
-    <div>
+    <>
       <div className="message-box">
         {messages.map((message) => (
           <div
@@ -96,7 +96,7 @@ const HomeReturningUser = (props) => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

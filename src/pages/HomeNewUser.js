@@ -103,35 +103,32 @@ const HomeNewUser = () => {
 
   return (
     <>
-      <div></div>
-      <div>
-        <div className="message-box">
-          {messages.map((message) => (
-            <div
-              className={`message ${
-                message.placement === "left" ? "aria-message" : ""
-              }`}
-              key={message.id}
-            >
-              <div>
-                {message.senderName} {message.time}
-              </div>
-              <div></div>
-              <div>--------------</div>
-              <div>{message.text}</div>
+      <div className="message-box">
+        {messages.map((message) => (
+          <div
+            className={`message ${
+              message.placement === "left" ? "aria-message" : ""
+            }`}
+            key={message.id}
+          >
+            <div>
+              {message.senderName} {message.time}
             </div>
-          ))}
-          <input
-            className="nameInput"
-            type="text"
-            placeholder="Enter your name"
-            value={inputValue}
-            onChange={handleNameChange}
-          />
-          <button className="nameButton" onClick={handleSaveName}>
-            Save Name
-          </button>
-        </div>
+            <div></div>
+            <div>--------------</div>
+            <div>{message.text}</div>
+          </div>
+        ))}
+        <input
+          className="nameInput"
+          type="text"
+          placeholder="Enter your name"
+          value={inputValue}
+          onChange={handleNameChange}
+        />
+        <button className="nameButton" onClick={handleSaveName}>
+          Save Name
+        </button>
       </div>
     </>
   );

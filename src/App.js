@@ -16,22 +16,24 @@ import Footer from "./Footer";
 function App() {
   return (
     <>
-      <Header />
-      <div className="app-main">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/chapter1" element={<Chapter1 />} />
-          <Route path="/chapter2" element={<Chapter2 />} />
-          <Route path="/chapter3" element={<Chapter3 />} />
-          <Route path="/chapter4" element={<Chapter4 />} />
-          <Route path="/chapter5" element={<Chapter5 />} />
-          <Route path="/chapter6" element={<Chapter6 />} />
-          <Route path="/chapter7" element={<Chapter7 />} />
-          <Route path="/chapter8" element={<Chapter8 />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+      <div className="app-container">
+        <Header />
+        <div className="app-main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/chapter1" element={<Chapter1 />} />
+            <Route path="/chapter2" element={<Chapter2 />} />
+            <Route path="/chapter3" element={<Chapter3 />} />
+            <Route path="/chapter4" element={<Chapter4 />} />
+            <Route path="/chapter5" element={<Chapter5 />} />
+            <Route path="/chapter6" element={<Chapter6 />} />
+            <Route path="/chapter7" element={<Chapter7 />} />
+            <Route path="/chapter8" element={<Chapter8 />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
