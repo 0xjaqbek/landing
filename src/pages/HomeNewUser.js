@@ -122,12 +122,15 @@ const HomeNewUser = () => {
             </div>
           ))}
           <input
+            className="nameInput"
             type="text"
             placeholder="Enter your name"
             value={inputValue}
             onChange={handleNameChange}
           />
-          <button onClick={handleSaveName}>Save Name</button>
+          <button className="nameButton" onClick={handleSaveName}>
+            Save Name
+          </button>
         </div>
       </div>
     </>

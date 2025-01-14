@@ -21,3 +21,13 @@
   background-color: rgb(240, 170, 231);
   align-self: flex-start;
 }
+
+/* temp */
+.nameInput {
+  font-size: 16px;
+  width: 95%;
+  align-self: center;
+}
+.nameButton {
+  align-self: center;
+}
