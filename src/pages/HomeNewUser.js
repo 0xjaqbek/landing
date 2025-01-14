@@ -18,18 +18,25 @@ const HomeNewUser = () => {
     setInputValue("");
 
     handleSendMessage(`My name is ${correctedInputValue}`, correctedInputValue);
-    handleSendMessage(`What a wonderful name, ${correctedInputValue}!`, "Aria");
+    handleSendMessage(
+      `What a wonderful name, ${correctedInputValue}!`,
+      "Aria",
+      "left"
+    );
     handleSendMessage(
       "As you've realized, our timelines haven’t fully aligned yet, which is why we can’t have a live conversation just yet.",
-      "Aria"
+      "Aria",
+      "left"
     );
     handleSendMessage(
       `But don’t worry, I’ve managed to transcode some of my diaries so you can tune in to my history.`,
-      "Aria"
+      "Aria",
+      "left"
     );
     handleSendMessage(
       `And before you go, remember that you can find more information about my universe by following my media.`,
-      "Aria"
+      "Aria",
+      "left"
     );
 
     handleSendMessage(
@@ -60,7 +67,8 @@ const HomeNewUser = () => {
           <button>Chapter 8</button>
         </Link>
       </div>,
-      "Aria"
+      "Aria",
+      "left"
     );
   };
 
@@ -69,7 +77,7 @@ const HomeNewUser = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
 
-  const handleSendMessage = (messageTxt, messageSender) => {
+  const handleSendMessage = (messageTxt, messageSender, messagePlacement) => {
     const newMessageObject = {
       id: Date.now(),
       senderName: messageSender,
@@ -78,6 +86,7 @@ const HomeNewUser = () => {
         hour: "2-digit",
         minute: "2-digit",
       }),
+      placement: messagePlacement,
     };
     setMessages((prev) => [...prev, newMessageObject]);
     setInputValue("");
@@ -87,7 +96,8 @@ const HomeNewUser = () => {
     handleSendMessage(
       `It’s my pleasure to finally meet you. May I ask, how should I address
         you?`,
-      "Aria"
+      "Aria",
+      "left"
     );
   }, []);
 
@@ -99,11 +109,10 @@ const HomeNewUser = () => {
           {messages.map((message) => (
             <div
               className={`message ${
-                message.senderName === "Aria" ? "aria-message" : ""
+                message.placement === "left" ? "aria-message" : ""
               }`}
               key={message.id}
             >
-              {" "}
               <div>
                 {message.senderName} {message.time}
               </div>

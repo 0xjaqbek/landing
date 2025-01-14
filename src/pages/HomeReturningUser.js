@@ -7,9 +7,9 @@ const HomeReturningUser = (props) => {
   const [name, setName] = useState(props.userName);
 
   const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState("");
+  const [inputValue, setInputValue] = useState("");
 
-  const handleSendMessage = (messageTxt, messageSender) => {
+  const handleSendMessage = (messageTxt, messageSender, messagePlacement) => {
     const newMessageObject = {
       id: Date.now(),
       senderName: messageSender,
@@ -18,27 +18,31 @@ const HomeReturningUser = (props) => {
         hour: "2-digit",
         minute: "2-digit",
       }),
+      placement: messagePlacement,
     };
     setMessages((prev) => [...prev, newMessageObject]);
-    setInput("");
+    setInputValue("");
   };
 
   useEffect(() => {
-    handleSendMessage(`Welcome back, ${name}!`, "Aria");
+    handleSendMessage(`Welcome back, ${name}!`, "Aria", "left");
     handleSendMessage(
       `As you've realized, our timelines haven’t fully aligned yet, which is
         why we can’t have a live conversation just yet.`,
-      "Aria"
+      "Aria",
+      "left"
     );
     handleSendMessage(
       `But don’t worry, I’ve managed to transcode some of my diaries so you can
         tune in to my history.`,
-      "Aria"
+      "Aria",
+      "left"
     );
     handleSendMessage(
       `And before you go, remember that you can find more information about my
         universe by following my media.`,
-      "Aria"
+      "Aria",
+      "left"
     );
     handleSendMessage(
       <div>
@@ -68,7 +72,8 @@ const HomeReturningUser = (props) => {
           <button>Chapter 8</button>
         </Link>
       </div>,
-      "Aria"
+      "Aria",
+      "left"
     );
   }, []);
 
@@ -78,11 +83,10 @@ const HomeReturningUser = (props) => {
         {messages.map((message) => (
           <div
             className={`message ${
-              message.senderName === "Aria" ? "aria-message" : ""
+              message.placement === "left" ? "aria-message" : ""
             }`}
             key={message.id}
           >
-            {" "}
             <div>
               {message.senderName} {message.time}
             </div>
