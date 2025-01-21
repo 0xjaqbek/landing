@@ -5,38 +5,10 @@
   height: 100svh;
 
   background-color: black;
-  background-image: url(".//Asets/background/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
-}
-
-.stone {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-}
-
-.stone1 {
-  top: 10%;
-  left: 15%;
-}
-.stone2 {
-  top: 50%;
-  left: 75%;
-}
-.stone3 {
-  top: 40%;
-  left: 35%;
-}
-.stone4 {
-  top: 2%;
-  left: 75%;
-}
-.stone5 {
-  top: 10%;
-  left: 45%;
 }
 
 .app-croped {
@@ -47,4 +19,18 @@
   margin-inline: auto;
 
   height: 100%;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 100svh;
+
+  object-fit: cover;
+  z-index: -2;
+}
+.background2 {
+  z-index: -1;
 }

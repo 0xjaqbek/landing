@@ -13,22 +13,16 @@ import NotFound from "./Pages/NotFound";
 import Header from "./Header";
 import Footer from "./Footer";
 
-import backgroundImage from "./Asets/background/background.jpg";
-import stone1 from "./Asets/background/stone1.svg";
-import stone2 from "./Asets/background/stone2.svg";
-import stone3 from "./Asets/background/stone3.svg";
-import stone4 from "./Asets/background/stone4.svg";
-import stone5 from "./Asets/background/stone5.svg";
+import backgroundImage1 from "./Asets/background1.svg";
+import backgroundImage2 from "./Asets/background2.png";
 
 function App() {
   return (
     <>
       <div className="app-container">
-        <img src={stone1} className={"stone stone1"} alt="stoneImg"></img>
-        <img src={stone2} className={"stone stone2"} alt="stoneImg"></img>
-        <img src={stone3} className={"stone stone3"} alt="stoneImg"></img>
-        <img src={stone4} className={"stone stone4"} alt="stoneImg"></img>
-        <img src={stone5} className={"stone stone5"} alt="stoneImg"></img>
+        <img src={backgroundImage1} className="background"></img>
+        <img src={backgroundImage2} className="background background2"></img>
+
         {/* <div className="app-croped"> */}
         {/* <Routes>
             <Route path="/" element={<Home />} />
