@@ -13,13 +13,24 @@ import NotFound from "./Pages/NotFound";
 import Header from "./Header";
 import Footer from "./Footer";
 
+import backgroundImage from "./Asets/background/background.jpg";
+import stone1 from "./Asets/background/stone1.svg";
+import stone2 from "./Asets/background/stone2.svg";
+import stone3 from "./Asets/background/stone3.svg";
+import stone4 from "./Asets/background/stone4.svg";
+import stone5 from "./Asets/background/stone5.svg";
+
 function App() {
   return (
     <>
       <div className="app-container">
-        <Header />
-        <div className="app-main">
-          <Routes>
+        <img src={stone1} className={"stone stone1"} alt="stoneImg"></img>
+        <img src={stone2} className={"stone stone2"} alt="stoneImg"></img>
+        <img src={stone3} className={"stone stone3"} alt="stoneImg"></img>
+        <img src={stone4} className={"stone stone4"} alt="stoneImg"></img>
+        <img src={stone5} className={"stone stone5"} alt="stoneImg"></img>
+        {/* <div className="app-croped"> */}
+        {/* <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/chapter1" element={<Chapter1 />} />
             <Route path="/chapter2" element={<Chapter2 />} />
@@ -30,9 +41,8 @@ function App() {
             <Route path="/chapter7" element={<Chapter7 />} />
             <Route path="/chapter8" element={<Chapter8 />} />
             <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-        <Footer />
+          </Routes> */}
+        {/* </div> */}
       </div>
     </>
   );

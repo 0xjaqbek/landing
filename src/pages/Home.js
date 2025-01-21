@@ -20,11 +20,11 @@ const Home = () => {
     return <div>Loading...</div>;
   }
 
-  if (userName) {
-    return <HomeReturningUser userName={userName} />;
-  } else {
-    return <HomeNewUser />;
-  }
+  // if (userName) {
+  //   return <HomeReturningUser userName={userName} />;
+  // } else {
+  //   return <HomeNewUser />;
+  // }
 };
 
 export default Home;
