@@ -1,4 +1,40 @@
-.message-box {
+.landing-page {
+  height: 100%;
+  /* background-color: rgba(250, 235, 215, 0.547); */
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button {
+  padding: 20px;
+  border-radius: 20px;
+
+  background-color: #001626;
+  font-weight: bold;
+  font-size: 32px;
+  filter: drop-shadow(0px 0px 16px rgba(0, 255, 255, 0.5));
+
+  /* box-shadow: inset 0 0 16px #00ffff; */
+  border: 1px #00ffff solid;
+  color: #00ffff;
+
+  font-family: "REM";
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button2 {
+  /* box-shadow: inset 0 0 16px #ffa12b; */
+  border: 1px #ffa12b solid;
+  color: #ffa12b;
+}
+
+message-box {
   background-color: rgb(172, 182, 212);
   padding: 5px;
 

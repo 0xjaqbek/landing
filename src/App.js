@@ -23,8 +23,8 @@ function App() {
         <img src={backgroundImage1} className="background"></img>
         <img src={backgroundImage2} className="background background2"></img>
 
-        {/* <div className="app-croped"> */}
-        {/* <Routes>
+        <div className="app-croped">
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/chapter1" element={<Chapter1 />} />
             <Route path="/chapter2" element={<Chapter2 />} />
@@ -35,8 +35,8 @@ function App() {
             <Route path="/chapter7" element={<Chapter7 />} />
             <Route path="/chapter8" element={<Chapter8 />} />
             <Route path="*" element={<NotFound />} />
-          </Routes> */}
-        {/* </div> */}
+          </Routes>
+        </div>
       </div>
     </>
   );

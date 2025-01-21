@@ -13,9 +13,9 @@
 
 .app-croped {
   margin: 0px;
-  background-color: rgba(192, 25, 25, 0.572);
+  background-color: rgba(39, 39, 39, 0.572);
 
-  width: min(100% - 30px, 600px);
+  width: min(100% - 30px, 550px);
   margin-inline: auto;
 
   height: 100%;

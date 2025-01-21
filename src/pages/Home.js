@@ -17,14 +17,30 @@ const Home = () => {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className="">Loading...</div>;
+  } else {
   }
 
-  // if (userName) {
-  //   return <HomeReturningUser userName={userName} />;
-  // } else {
-  //   return <HomeNewUser />;
-  // }
+  if (userName) {
+    return <div>home...1</div>;
+    return <div>home...1</div>;
+    return <div>home...1</div>;
+
+    // return <HomeReturningUser userName={userName} />;
+  } else {
+    return (
+      <>
+        <div className="landing-page">
+          <div>head....2</div>
+          <div>home....2</div>
+          <button className="button"> ENTER STORY</button>
+          <button className="button button2"> LETS TALK</button>
+          <div>footer....2</div>
+        </div>
+      </>
+    );
+    // return <HomeNewUser />;
+  }
 };
 
 export default Home;
