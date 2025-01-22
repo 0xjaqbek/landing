@@ -10,25 +10,16 @@ import Chapter6 from "./Pages/Chapter6";
 import Chapter7 from "./Pages/Chapter7";
 import Chapter8 from "./Pages/Chapter8";
 import NotFound from "./Pages/NotFound";
-import Header from "./Header";
-import Footer from "./Footer";
 
 import backgroundImage1 from "./Asets/background1.png";
 import backgroundImage2 from "./Asets/background2.png";
 
 function App() {
-  const handleClick = () => {
-    alert("Button clicked!");
-  };
-
   return (
     <>
       <div className="app-container">
         <img src={backgroundImage1} className="background"></img>
         <img src={backgroundImage2} className="background background2"></img>
-        <button type="button" onClick={handleClick}>
-          ok
-        </button>
         <div className="app-croped">
           <Routes>
             <Route path="/" element={<Home />} />

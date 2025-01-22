@@ -8,12 +8,12 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: 1;
 }
 
 .app-croped {
   margin: 0px;
-  background-color: rgba(39, 39, 39, 0.572);
+  /* background-color: rgba(39, 39, 39, 0.572); */
 
   width: min(100% - 30px, 550px);
   margin-inline: auto;
