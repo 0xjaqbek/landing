@@ -1,8 +1,6 @@
 import "./page.css";
 
 import React, { useState, useEffect } from "react";
-import HomeNewUser from "./HomeNewUser";
-import HomeReturningUser from "./HomeReturningUser";
 
 import ariaProfile from "../Asets/ariaProfile.png";
 import frame from "../Asets/frame.svg";
@@ -27,32 +25,28 @@ function Home() {
     return <div className="">Loading...</div>;
   } else {
   }
-
-  if (userName) {
-    return <div>home...1</div>;
-    return <div>home...1</div>;
-    return <div>home...1</div>;
-
-    // return <HomeReturningUser userName={userName} />;
-  } else {
-    return (
-      <>
-        <div className="landing-page">
-          <div className="topGroup">
-            <img className="ariaProfile" src={ariaProfile} alt="ariaProfile" />
+  return (
+    <>
+      <div className="landing-page">
+        <div className="topGroup">
+          <img className="ariaProfile" src={ariaProfile} alt="ariaProfile" />
+          <div className="frameContainer">
+            <p className="headerTxt">
+              Hello adventurer! MY NAME IS ARIA INGRAM. <br />{" "}
+              <span className="highlight">ready</span> to follow my story?
+            </p>
             <img className="frame" src={frame} alt="frame" />
           </div>
-          <button onClick={handleClick} className="button">
-            ENTER STORY
-          </button>
-          <button onClick={handleClick} className="button button2">
-            LETS TALK
-          </button>
         </div>
-      </>
-    );
-    // return <HomeNewUser />;
-  }
+        <button onClick={handleClick} className="button">
+          ENTER STORY
+        </button>
+        <button onClick={handleClick} className="button button2">
+          LETS TALK
+        </button>
+      </div>
+    </>
+  );
 }
 
 export default Home;
