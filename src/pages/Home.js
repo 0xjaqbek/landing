@@ -1,6 +1,7 @@
 import "./page.css";
 
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import ariaProfile from "../Asets/ariaProfile.png";
 import frame from "../Asets/frame.svg";
@@ -21,6 +22,8 @@ function Home() {
     alert("Button clicked!");
   };
 
+  const navigate = useNavigate();
+
   if (isLoading) {
     return <div className="">Loading...</div>;
   } else {
@@ -32,16 +35,16 @@ function Home() {
           <img className="ariaProfile" src={ariaProfile} alt="ariaProfile" />
           <div className="frameContainer">
             <p className="headerTxt">
-              Hello adventurer! MY NAME IS ARIA INGRAM. <br />{" "}
+              Hello adventurer! <br /> MY NAME IS ARIA INGRAM. <br />
               <span className="highlight">ready</span> to follow my story?
             </p>
             <img className="frame" src={frame} alt="frame" />
           </div>
         </div>
-        <button onClick={handleClick} className="button">
+        <button onClick={() => navigate("/page1")} className="button">
           ENTER STORY
         </button>
-        <button onClick={handleClick} className="button button2">
+        <button onClick={() => navigate("/page1")} className="button button2">
           LETS TALK
         </button>
       </div>

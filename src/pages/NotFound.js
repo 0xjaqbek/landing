@@ -6,11 +6,16 @@ const NotFound = () => {
   usePageVisitTracking("/404");
 
   return (
-    <div>
-      <h1>Page Not Found</h1>
+    <div className="notFoundContainer">
+      <h1>404 You got lost.</h1>
       <p>The page you're looking for doesn't exist.</p>
+      <h3>
+        If you are thirsty for more inside stories, <br />
+        check out our extra stories published on our X channel. <br /> Or, head
+        back home:
+      </h3>
       <Link to="/">
-        <button>Go back to Home</button>
+        <button className="button">Take Me Home</button>
       </Link>
     </div>
   );
