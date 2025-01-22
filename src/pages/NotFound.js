@@ -7,7 +7,9 @@ const NotFound = () => {
 
   return (
     <div className="notFoundContainer">
-      <h1>404 You got lost.</h1>
+      <h1>
+        <span className="highlight">404</span> You got lost.
+      </h1>
       <p>The page you're looking for doesn't exist.</p>
       <h3>
         If you are thirsty for more inside stories, <br />
@@ -15,7 +17,7 @@ const NotFound = () => {
         back home:
       </h3>
       <Link to="/">
-        <button className="button">Take Me Home</button>
+        <button className="button button2">Take Me Home</button>
       </Link>
     </div>
   );

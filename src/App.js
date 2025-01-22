@@ -1,6 +1,8 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
+import Chat from "./Pages/Chat";
+import Story from "./Pages/Story";
 import Chapter1 from "./Pages/Chapter1";
 import Chapter2 from "./Pages/Chapter2";
 import Chapter3 from "./Pages/Chapter3";
@@ -23,6 +25,8 @@ function App() {
         <div className="app-croped">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/story" element={<Story />} />
             <Route path="/chapter1" element={<Chapter1 />} />
             <Route path="/chapter2" element={<Chapter2 />} />
             <Route path="/chapter3" element={<Chapter3 />} />

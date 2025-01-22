@@ -41,10 +41,10 @@ function Home() {
             <img className="frame" src={frame} alt="frame" />
           </div>
         </div>
-        <button onClick={() => navigate("/page1")} className="button">
+        <button onClick={() => navigate("/story")} className="button">
           ENTER STORY
         </button>
-        <button onClick={() => navigate("/page1")} className="button button2">
+        <button onClick={() => navigate("/chat")} className="button button2">
           LETS TALK
         </button>
       </div>

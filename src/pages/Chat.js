@@ -3,7 +3,7 @@ import "./page.css";
 import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 
-const HomeNewUser = () => {
+const Chat = () => {
   const [inputValue, setInputValue] = useState("");
   const [userName, setUserName] = useState("");
 
@@ -134,4 +134,4 @@ const HomeNewUser = () => {
   );
 };
 
-export default HomeNewUser;
+export default Chat;
