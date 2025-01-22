@@ -24,17 +24,20 @@
   font-family: "REM";
 }
 
-.button:hover {
-  cursor: pointer;
-}
-
 .button2 {
   /* box-shadow: inset 0 0 16px #ffa12b; */
   border: 1px #ffa12b solid;
   color: #ffa12b;
 }
+button:hover {
+  background-color: rgba(240, 46, 170, 0.2);
+  cursor: pointer;
+  transform: scale(0.99);
+  transition: 0.1s;
+  align-self: center;
+}
 
-message-box {
+.message-box {
   background-color: rgb(172, 182, 212);
   padding: 5px;
 
