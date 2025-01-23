@@ -91,6 +91,11 @@ const Chat = () => {
     setMessages((prev) => [...prev, newMessageObject]);
     setInputValue("");
   };
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSaveName();
+    }
+  };
 
   useEffect(() => {
     handleSendMessage(
@@ -126,6 +131,7 @@ const Chat = () => {
             type="text"
             placeholder="type your name"
             value={inputValue}
+            onKeyDown={handleKeyPress}
             onChange={handleNameChange}
           />
           <button className="input-button" onClick={handleSaveName}>
