@@ -1,4 +1,4 @@
-import "./page.css";
+import "./chat.css";
 
 import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
@@ -107,7 +107,7 @@ const Chat = () => {
         {messages.map((message) => (
           <div
             className={`message ${
-              message.placement === "left" ? "aria-message" : ""
+              message.placement === "left" ? "left-message" : ""
             }`}
             key={message.id}
           >
@@ -119,16 +119,19 @@ const Chat = () => {
             <div>{message.text}</div>
           </div>
         ))}
-        <input
-          className="nameInput"
-          type="text"
-          placeholder="Enter your name"
-          value={inputValue}
-          onChange={handleNameChange}
-        />
-        <button className="nameButton" onClick={handleSaveName}>
-          Save Name
-        </button>
+
+        <div className="input-box">
+          <input
+            className="input"
+            type="text"
+            placeholder="type your name"
+            value={inputValue}
+            onChange={handleNameChange}
+          />
+          <button className="input-button" onClick={handleSaveName}>
+            enter
+          </button>
+        </div>
       </div>
     </>
   );
