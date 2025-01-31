@@ -3,6 +3,9 @@ import "./chat.css";
 import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 
+import ariaIcon from "../Asets/ariaChatIcon.png";
+import userIcon from "../Asets/userChatIcon.png";
+
 const Chat = () => {
   const [inputValue, setInputValue] = useState("");
   const [userName, setUserName] = useState("");
@@ -17,7 +20,10 @@ const Chat = () => {
     setUserName(correctedInputValue);
     setInputValue("");
 
-    handleSendMessage(`My name is ${correctedInputValue}`, correctedInputValue);
+    handleSendMessage(
+      `My name is ${correctedInputValue}.`,
+      correctedInputValue
+    );
     handleSendMessage(
       `What a wonderful name, ${correctedInputValue}!`,
       "Aria",
@@ -116,11 +122,14 @@ const Chat = () => {
             }`}
             key={message.id}
           >
-            <div>
-              {message.senderName} {message.time}
+            <div className="message-header">
+              <img
+                src={message.placement === "left" ? ariaIcon : userIcon}
+                className="profile-img"
+                alt="User Icon"
+              />
+              {message.senderName}
             </div>
-            <div></div>
-            <div>--------------</div>
             <div>{message.text}</div>
           </div>
         ))}
