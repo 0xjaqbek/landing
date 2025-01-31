@@ -34,10 +34,15 @@ function Home() {
         <div className="topGroup">
           <img className="ariaProfile" src={ariaProfile} alt="ariaProfile" />
           <div className="frameContainer">
-            <p className="headerTxt">
-              Hello adventurer! <br /> MY NAME IS ARIA INGRAM. <br />
-              <span className="highlight">ready</span> to follow my story?
-            </p>
+            <div className="headerTxt">
+              <p className="line">
+                Hello adventurer! <br /> MY NAME IS ARIA INGRAM.
+              </p>
+              <p className="line">
+                <span className="highlight"> ready</span> to follow my story?
+              </p>
+            </div>
+
             <img className="frame" src={frame} alt="frame" />
           </div>
         </div>
