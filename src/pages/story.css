@@ -15,8 +15,8 @@
   background-color: #001626;
   box-shadow: 0px 0px 7.24px rgba(255, 161, 43, 0.5);
 
-  border: 1px #ffa12b solid;
-  color: #ffa12b;
+  border: 0.5px #bbbbbb solid;
+  color: #bbbbbb;
 
   font-family: "REM";
   font-weight: bold;
@@ -27,6 +27,10 @@ button-header:hover {
   cursor: pointer;
   transform: scale(0.99);
   transition: 0.1s;
+}
+.button-header.active {
+  border: 0.5px #ffa12b solid;
+  color: #ffa12b;
 }
 
 .baner {
@@ -61,6 +65,7 @@ button-header:hover {
   font-weight: bold;
   font-size: 18px;
 }
+
 .banner-img {
   width: 100px;
   height: 100px;
