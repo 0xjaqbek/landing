@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.button-header {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 9px;
+  padding: 9px;
+
+  background-color: #001626;
+  box-shadow: 0px 0px 7.24px rgba(255, 161, 43, 0.5);
+
+  border: 0.5px #bbbbbb solid;
+  color: #bbbbbb;
+
+  font-family: "REM";
+  font-weight: bold;
+  font-size: 14px;
+}
+
+button-header:hover {
+  cursor: pointer;
+  transform: scale(0.99);
+  transition: 0.1s;
+}
+.button-header.active {
+  border: 0.5px #ffa12b solid;
+  color: #ffa12b;
+}
+
+.baner {
+  background-color: rgb(0, 0, 0);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-transform: uppercase;
+}
+.banner-header {
+  color: #a86dff;
+}
+.banner-text {
+  color: #0edbff;
+}
+.banner-button {
+  margin: 10px;
+  background-color: aqua;
+  color: #a86dff;
+  padding: 5.5px;
+
+  border: 1px #a86dff solid;
+  background-color: #001626;
+  border-radius: 11px;
+
+  font-family: "REM";
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.banner-img {
+  width: 100px;
+  height: 100px;
+  background-color: aliceblue;
+}
+
+.plot-cointerner {
+  padding: 30px;
+  background-color: #000000;
+  border: 1px #00ffff solid;
+  display: flex;
+  flex-direction: column;
+}
+.aria-profile {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+.title {
+  color: #ffffff;
+  font-weight: bold;
+}
+.plot {
+  color: #ffffff;
+  text-align: left;
+  text-transform: uppercase;
+}
