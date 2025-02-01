@@ -6,7 +6,7 @@
 
   display: flex;
 
-  background-color: black;
+  background-color: rgb(178, 172, 172);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,13 +15,17 @@
 
 .app-croped {
   margin: 0px;
-  background-color: rgba(39, 39, 39, 0.572);
+  background-color: rgba(200, 200, 200, 0.219);
 
   width: min(100% - 30px, 550px);
   margin-inline: auto;
 
-  min-height: 100%;
+  height: 100%;
+  /* overflow-y: scroll; */
 }
+/* .app-croped::-webkit-scrollbar {
+  display: none;
+} */
 
 .background {
   position: fixed;
