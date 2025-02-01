@@ -9,6 +9,12 @@ import userIcon from "../Asets/userChatIcon.png";
 const Chat = () => {
   const [inputValue, setInputValue] = useState("");
   const [userName, setUserName] = useState("");
+  const [inputDisabled, setInputDisabled] = useState(false);
+
+  const toggleInput = () => {
+    setInputDisabled((prev) => !prev);
+    console.log("toggleInput");
+  };
 
   const handleNameChange = (e) => {
     setInputValue(e.target.value);
@@ -35,47 +41,12 @@ const Chat = () => {
       "left"
     );
     handleSendMessage(
-      `But don’t worry, I’ve managed to transcode some of my diaries so you can tune in to my history.`,
+      `But don’t worry, I’ve managed to transcode some of my diaries so you can go directly to read`,
       "Aria",
       "left"
     );
-    handleSendMessage(
-      `And before you go, remember that you can find more information about my universe by following my media.`,
-      "Aria",
-      "left"
-    );
-
-    handleSendMessage(
-      <div>
-        <h3>Choose a chapter to start reading:</h3>
-        <Link to="/chapter1">
-          <button>Chapter 1</button>
-        </Link>
-        <Link to="/chapter2">
-          <button>Chapter 2</button>
-        </Link>
-        <Link to="/chapter3">
-          <button>Chapter 3</button>
-        </Link>
-        <Link to="/chapter4">
-          <button>Chapter 4</button>
-        </Link>
-        <Link to="/chapter5">
-          <button>Chapter 5</button>
-        </Link>
-        <Link to="/chapter6">
-          <button>Chapter 6</button>
-        </Link>
-        <Link to="/chapter7">
-          <button>Chapter 7</button>
-        </Link>
-        <Link to="/chapter8">
-          <button>Chapter 8</button>
-        </Link>
-      </div>,
-      "Aria",
-      "left"
-    );
+    handleSendMessage("Im desabling the chat fethure", "Aria", "left");
+    toggleInput();
   };
 
   // --------------------------
@@ -134,17 +105,24 @@ const Chat = () => {
           </div>
         ))}
 
-        <div className="input-box">
+        <div className={`input-box ${inputDisabled ? "disabled-box" : ""}`}>
           <input
-            className="input"
+            className={`input ${
+              inputDisabled ? "input-disabled" : "input-active"
+            }`}
             type="text"
-            placeholder="type your name"
+            placeholder={
+              inputDisabled
+                ? "Chat function got disabled."
+                : "type your name ....."
+            }
             value={inputValue}
             onKeyDown={handleKeyPress}
             onChange={handleNameChange}
+            disabled={inputDisabled}
           />
           <button className="input-button" onClick={handleSaveName}>
-            enter
+            {inputDisabled ? "Go to story" : "Enter"}
           </button>
         </div>
       </div>

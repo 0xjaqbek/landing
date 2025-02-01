@@ -80,6 +80,9 @@
   width: min(100% - 30px, 550px);
   z-index: 3;
 }
+.disabled-box {
+  border-color: #bbbbbb;
+}
 
 .input {
   margin: 20px;
@@ -122,4 +125,11 @@
   cursor: pointer;
   transform: scale(0.99);
   transition: 0.1s;
+}
+.input::placeholder {
+  color: #ffa12b;
+}
+
+.input-disabled::placeholder {
+  color: #bbbbbb;
 }
