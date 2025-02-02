@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div className="app-container">
-        <img src={backgroundImage1} className="background"></img>
+        {/* <img src={backgroundImage1} className="background"></img> */}
         <img src={backgroundImage2} className="background background2"></img>
         <div className="app-croped">
           <Routes>
