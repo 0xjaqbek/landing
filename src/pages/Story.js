@@ -5,7 +5,7 @@ import "./story.css";
 import ariaIcon from "../Asets/ariaChatIcon.png";
 
 const Story = () => {
-  const [currentChapter, setCurrentChapter] = useState(1);
+  const [currentChapter, setCurrentChapter] = useState("1");
 
   const changeChapter = (chapter) => {
     setCurrentChapter(chapter);

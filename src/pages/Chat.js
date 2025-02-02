@@ -1,7 +1,7 @@
 import "./chat.css";
 
 import React, { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import ariaIcon from "../Asets/ariaChatIcon.png";
 import userIcon from "../Asets/userChatIcon.png";
@@ -10,6 +10,11 @@ const Chat = () => {
   const [inputValue, setInputValue] = useState("");
   const [userName, setUserName] = useState("");
   const [inputDisabled, setInputDisabled] = useState(false);
+
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/story");
+  };
 
   const toggleInput = () => {
     setInputDisabled((prev) => !prev);
@@ -121,8 +126,11 @@ const Chat = () => {
             onChange={handleNameChange}
             disabled={inputDisabled}
           />
-          <button className="input-button" onClick={handleSaveName}>
-            {inputDisabled ? "Go to story" : "Enter"}
+          <button
+            className="input-button"
+            onClick={inputDisabled ? handleNavigate : handleSaveName}
+          >
+            {inputDisabled ? "Enter story" : "Enter"}
           </button>
         </div>
       </div>
