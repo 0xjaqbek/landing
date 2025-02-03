@@ -73,6 +73,7 @@ const Chat = () => {
     setMessages((prev) => [...prev, newMessageObject]);
     setInputValue("");
   };
+
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       handleSaveName();
@@ -80,12 +81,27 @@ const Chat = () => {
   };
 
   useEffect(() => {
-    handleSendMessage(
-      `It’s my pleasure to finally meet you. May I ask, how should I address
-        you?`,
-      "Aria",
-      "left"
-    );
+    const storedUserName = localStorage.getItem("userName");
+    if (storedUserName) {
+      setUserName(storedUserName);
+      setInputDisabled(true);
+      handleSendMessage(
+        `${storedUserName}, I’m just as excited as you are! Though we can’t have a real-time conversation yet.`,
+        "Aria",
+        "left"
+      );
+      handleSendMessage(
+        "But don’t worry, until that moment arrives, you can explore my diaries and uncover the secrets of my journey.",
+        "Aria",
+        "left"
+      );
+    } else {
+      handleSendMessage(
+        `It’s my pleasure to finally meet you. May I ask, how should I address you?`,
+        "Aria",
+        "left"
+      );
+    }
   }, []);
 
   return (
