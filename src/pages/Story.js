@@ -11,6 +11,9 @@ const Story = () => {
     setCurrentChapter(chapter);
     console.log("Current chapter: " + currentChapter);
   };
+  const mint = (chapter) => {
+    alert(`Minting for Chapter ${chapter}`);
+  };
 
   const chapters = {
     1: `Why do we use it? It is a long established fact that a reader will be
@@ -53,7 +56,9 @@ const Story = () => {
           since the 1500s, when an
         </p>
         <img className="banner-img" />
-        <button className="banner-button">MINT</button>
+        <button className="banner-button" onClick={() => mint(currentChapter)}>
+          MINT
+        </button>
       </div>
       <div className="plot-cointerner">
         <div className="message-header">

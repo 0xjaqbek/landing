@@ -18,10 +18,6 @@ function Home() {
     setIsLoading(false);
   }, []);
 
-  const handleClick = () => {
-    alert("Button clicked!");
-  };
-
   const navigate = useNavigate();
 
   if (isLoading) {
