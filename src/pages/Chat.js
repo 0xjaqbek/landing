@@ -159,7 +159,7 @@ const Chat = () => {
               ) : (
                 message.text
               )}
-            </div>{" "}
+            </div>
           </div>
         ))}
 

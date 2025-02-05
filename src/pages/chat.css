@@ -5,8 +5,9 @@
 
   display: flex;
   flex-direction: column;
-
   align-items: flex-end;
+
+  padding-bottom: 400px;
 }
 
 .message-header {
@@ -39,6 +40,21 @@
 
   position: relative;
   z-index: 2;
+
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .left-message {

@@ -60,12 +60,14 @@ const Story = () => {
           MINT
         </button>
       </div>
-      <div className="plot-cointerner">
-        <div className="message-header">
-          <img className="aria-profile" src={ariaIcon} />
-          <p className="title">ARIA INGRAM</p>
+      <div className="plot-big-cointerner">
+        <div className="plot-cointerner">
+          <div className="message-header">
+            <img className="aria-profile" src={ariaIcon} />
+            <p className="title">ARIA INGRAM</p>
+          </div>
+          <p className="plot">{chapters[currentChapter]}</p>
         </div>
-        <p className="plot">{chapters[currentChapter]}</p>
       </div>
     </div>
   );

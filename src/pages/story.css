@@ -74,6 +74,9 @@ button-header:hover {
   background-color: aliceblue;
 }
 
+.plot-big-cointerner {
+  padding-bottom: 200px;
+}
 .plot-cointerner {
   padding: 30px;
   background-color: #000000;
