@@ -26,20 +26,16 @@ const Chat = () => {
   };
 
   const handleSaveName = () => {
-    const correctedInputValue = inputValue.trim().substring(0, 10);
-    localStorage.setItem("userName", correctedInputValue);
-    setUserName(correctedInputValue);
+    localStorage.setItem("userName", inputValue);
+    setUserName(inputValue);
     setInputValue("");
 
     setTimeout(() => {
-      handleSendMessage(
-        `My name is ${correctedInputValue}.`,
-        correctedInputValue
-      );
+      handleSendMessage(`My name is ${inputValue}.`, inputValue);
     }, 200);
 
     setTimeout(() => {
-      simulateTyping(`What a wonderful name, ${correctedInputValue}!`, 1500);
+      simulateTyping(`What a wonderful name, ${inputValue}!`, 1500);
     }, 1000);
 
     setTimeout(() => {
@@ -182,6 +178,7 @@ const Chat = () => {
             onKeyDown={handleKeyPress}
             onChange={handleNameChange}
             disabled={inputDisabled}
+            maxLength={10}
           />
           <button
             className="input-button"
