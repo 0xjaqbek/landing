@@ -31,27 +31,38 @@ const Chat = () => {
     setUserName(correctedInputValue);
     setInputValue("");
 
-    handleSendMessage(
-      `My name is ${correctedInputValue}.`,
-      correctedInputValue
-    );
-    handleSendMessage(
-      `What a wonderful name, ${correctedInputValue}!`,
-      "Aria",
-      "left"
-    );
-    handleSendMessage(
-      "As you've realized, our timelines haven’t fully aligned yet, which is why we can’t have a live conversation just yet.",
-      "Aria",
-      "left"
-    );
-    handleSendMessage(
-      `But don’t worry, I’ve managed to transcode some of my diaries so you can go directly to read`,
-      "Aria",
-      "left"
-    );
-    handleSendMessage("Im desabling the chat fethure", "Aria", "left");
-    toggleInput();
+    setTimeout(() => {
+      handleSendMessage(
+        `My name is ${correctedInputValue}.`,
+        correctedInputValue
+      );
+    }, 200);
+
+    setTimeout(() => {
+      simulateTyping(`What a wonderful name, ${correctedInputValue}!`, 1500);
+    }, 1000);
+
+    setTimeout(() => {
+      simulateTyping(
+        "As you've realized, our timelines haven’t fully aligned yet, which is why we can’t have a live conversation just yet.",
+        2000
+      );
+    }, 3500);
+
+    setTimeout(() => {
+      simulateTyping(
+        `But don’t worry, I’ve managed to transcode some of my diaries so you can go directly to read`,
+        1600
+      );
+    }, 7000);
+
+    setTimeout(() => {
+      simulateTyping("I'm disabling the chat feature.", 900);
+    }, 9000);
+
+    setTimeout(() => {
+      toggleInput();
+    }, 1000);
   };
 
   // --------------------------
@@ -64,14 +75,33 @@ const Chat = () => {
       id: Date.now(),
       senderName: messageSender,
       text: messageTxt,
-      time: new Date(Date.now()).toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
       placement: messagePlacement,
     };
     setMessages((prev) => [...prev, newMessageObject]);
     setInputValue("");
+  };
+
+  const simulateTyping = (message, delay) => {
+    const typingMessage = {
+      id: "typing",
+      senderName: "ARIA",
+      placement: "left",
+      isTyping: true,
+    };
+    setMessages((prev) => [...prev, typingMessage]);
+
+    setTimeout(() => {
+      setMessages((prev) =>
+        prev
+          .filter((msg) => msg.id !== "typing")
+          .concat({
+            id: Date.now(),
+            senderName: "Aria",
+            text: message,
+            placement: "left",
+          })
+      );
+    }, delay);
   };
 
   const handleKeyPress = (event) => {
@@ -85,21 +115,22 @@ const Chat = () => {
     if (storedUserName) {
       setUserName(storedUserName);
       setInputDisabled(true);
-      handleSendMessage(
+
+      simulateTyping(
         `${storedUserName}, I’m just as excited as you are! Though we can’t have a real-time conversation yet.`,
-        "Aria",
-        "left"
+        1500
       );
-      handleSendMessage(
-        "But don’t worry, until that moment arrives, you can explore my diaries and uncover the secrets of my journey.",
-        "Aria",
-        "left"
-      );
+
+      setTimeout(() => {
+        simulateTyping(
+          "But don’t worry, until that moment arrives, you can explore my diaries and uncover the secrets of my journey.",
+          1600
+        );
+      }, 2500);
     } else {
-      handleSendMessage(
+      simulateTyping(
         `It’s my pleasure to finally meet you. May I ask, how should I address you?`,
-        "Aria",
-        "left"
+        1200
       );
     }
   }, []);
@@ -122,7 +153,17 @@ const Chat = () => {
               />
               {message.senderName}
             </div>
-            <div>{message.text}</div>
+            <div>
+              {message.isTyping ? (
+                <div className="typing">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              ) : (
+                message.text
+              )}
+            </div>{" "}
           </div>
         ))}
 
