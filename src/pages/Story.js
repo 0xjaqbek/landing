@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import usePageVisitTracking from "../CustomHooks/usePageVisitTracking"; // Adjust the import path
 import "./story.css";
 import ariaIcon from "../Asets/ariaChatIcon.png";
 import navUp from "../Asets/navUp.svg";
 import navBack from "../Asets/navBack.svg";
-
 import chapters from "./chapters.js";
 
 const Story = () => {
@@ -23,6 +21,7 @@ const Story = () => {
     setCurrentChapter(chapter);
     console.log("Current chapter: " + currentChapter);
   };
+
   const mint = (chapter) => {
     window.open(`https://example.com/${chapter}`, "_blank");
   };

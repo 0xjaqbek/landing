@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import usePageVisitTracking from "../CustomHooks/usePageVisitTracking"; // Adjust the import path
 
 const NotFound = () => {
-  usePageVisitTracking("/404");
-
   return (
     <div className="notFoundContainer">
       <h1>
