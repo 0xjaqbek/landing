@@ -14,13 +14,13 @@ body {
   font-family: REM;
   background-color: rgb(0, 0, 0);
 
-  background-image: url("./Asets/background1.webp");
+  text-transform: uppercase;
+
+  /* background-image: url("./Asets/background1.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  background-size: cover;
-
-  text-transform: uppercase;
+  background-size: cover; */
 }
 
 code {

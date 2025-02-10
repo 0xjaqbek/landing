@@ -5,13 +5,14 @@ import Chat from "./Pages/Chat";
 import Story from "./Pages/Story";
 import NotFound from "./Pages/NotFound";
 
+import backgroundImage1 from "./Asets/background1.webp";
 import backgroundImage2 from "./Asets/background2.png";
 
 function App() {
   return (
     <>
       <div className="app-container">
-        {/* <img src={backgroundImage1} className="background"></img> */}
+        <img src={backgroundImage1} className="background"></img>
         <img src={backgroundImage2} className="background background2"></img>
         <div className="app-croped">
           <Routes>
