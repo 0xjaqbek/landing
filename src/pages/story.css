@@ -28,6 +28,7 @@ button-header:hover {
   transform: scale(0.99);
   transition: 0.1s;
 }
+
 .button-header.active {
   border: 0.5px #ffa12b solid;
   color: #ffa12b;
@@ -50,6 +51,7 @@ button-header:hover {
 }
 .banner-text {
   color: #0edbff;
+  margin-top: ;
 }
 .banner-button {
   margin: 10px;
@@ -62,13 +64,13 @@ button-header:hover {
   border-radius: 11px;
 
   font-family: "REM";
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 18px;
 }
 
 .banner-img {
-  width: 100px;
-  height: 100px;
+  width: 154px;
+  height: 154px;
   background-color: aliceblue;
 }
 
