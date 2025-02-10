@@ -31,7 +31,7 @@ const Story = () => {
       <img
         className="nav-back"
         src={navBack}
-        alt="Nav back"
+        alt="Nav. back"
         onClick={() => navigate("/")}
       />
 
