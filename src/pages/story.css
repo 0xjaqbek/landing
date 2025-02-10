@@ -1,3 +1,30 @@
+.nav-up {
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  z-index: 100;
+  right: max(calc((100vw - 550px) / 2 - 110px), 10px);
+}
+.nav-up:hover {
+  cursor: pointer;
+  transform: scale(0.98);
+  transition: 0.1s;
+  filter: drop-shadow(0px 0px 5px #b6b6b6);
+}
+.nav-back {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  z-index: 100;
+  right: max(calc((100vw - 550px) / 2 - 135px), 10px);
+}
+.nav-back:hover {
+  cursor: pointer;
+  transform: scale(0.98);
+  transition: 0.1s;
+  filter: drop-shadow(0px 0px 5px #b6b6b6);
+}
+
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +50,7 @@
   font-size: 14px;
 }
 
-button-header:hover {
+.button-header:hover {
   cursor: pointer;
   transform: scale(0.99);
   transition: 0.1s;
@@ -51,7 +78,6 @@ button-header:hover {
 }
 .banner-text {
   color: #0edbff;
-  margin-top: ;
 }
 .banner-button {
   margin: 10px;
@@ -74,6 +100,9 @@ button-header:hover {
   background-color: aliceblue;
 }
 
+.plot-big-cointerner {
+  padding-bottom: 200px;
+}
 .plot-cointerner {
   padding: 30px;
   background-color: #000000;
@@ -94,4 +123,5 @@ button-header:hover {
   color: #ffffff;
   text-align: left;
   text-transform: uppercase;
+  text-transform: none;
 }

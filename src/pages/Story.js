@@ -1,34 +1,41 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, Link } from "react-router-dom";
-import usePageVisitTracking from "../CustomHooks/usePageVisitTracking"; // Adjust the import path
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import "./story.css";
 import ariaIcon from "../Asets/ariaChatIcon.png";
+import navUp from "../Asets/navUp.svg";
+import navBack from "../Asets/navBack.svg";
+import chapters from "./chapters.js";
 
 const Story = () => {
-  const [currentChapter, setCurrentChapter] = useState(1);
+  const [currentChapter, setCurrentChapter] = useState("1");
+
+  const navigate = useNavigate();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const changeChapter = (chapter) => {
     setCurrentChapter(chapter);
     console.log("Current chapter: " + currentChapter);
   };
 
-  const chapters = {
-    1: `Why do we use it? It is a long established fact that a reader will be
-        distracted by the readable content of a page when looking at its
-        layout...`,
-    2: `Where does it come from? Contrary to popular belief, Lorem Ipsum is
-        not simply random text. It has roots in a piece of classical Latin
-        literature from 45 BC...`,
-    3: `Chapter 3: Some different content for another chapter...`,
-    4: `Chapter 4: More content here...`,
-    5: `Chapter 5: Additional chapter details...`,
-    6: `Chapter 6: Something else interesting...`,
-    7: `Chapter 7: Another section of content...`,
-    8: `Chapter 8: The final chapter with information...`,
+  const mint = (chapter) => {
+    window.open(`https://example.com/${chapter}`, "_blank");
   };
 
   return (
-    <div>
+    <>
+      <img
+        className="nav-back"
+        src={navBack}
+        alt="Nav. back"
+        onClick={() => navigate("/")}
+      />
+
+      <img className="nav-up" src={navUp} alt="Nav up" onClick={scrollToTop} />
       <div className="header">
         {[...Array(8)].map((_, i) => {
           const chapterNumber = (i + 1).toString();
@@ -53,16 +60,31 @@ const Story = () => {
           since the 1500s, when an
         </p>
         <img className="banner-img" />
-        <button className="banner-button">MINT</button>
+        <button className="banner-button" onClick={() => mint(currentChapter)}>
+          MINT
+        </button>
       </div>
-      <div className="plot-cointerner">
-        <div className="message-header">
-          <img className="aria-profile" src={ariaIcon} />
-          <p className="title">ARIA INGRAM</p>
+      <div className="plot-big-cointerner">
+        <div className="plot-cointerner">
+          <div className="message-header">
+            <img className="aria-profile" src={ariaIcon} />
+            <p className="title">
+              Chapter {chapters[currentChapter].id} “
+              {chapters[currentChapter].title}”
+            </p>
+          </div>
+          <p className="plot">
+            {chapters[currentChapter].content.split("\n").map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                <br />
+                <br />
+              </React.Fragment>
+            ))}
+          </p>
         </div>
-        <p className="plot">{chapters[currentChapter]}</p>
       </div>
-    </div>
+    </>
   );
 };
 

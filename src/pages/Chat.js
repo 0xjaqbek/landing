@@ -1,81 +1,66 @@
 import "./chat.css";
 
 import React, { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
+import navBack from "../Asets/navBack.svg";
 import ariaIcon from "../Asets/ariaChatIcon.png";
 import userIcon from "../Asets/userChatIcon.png";
 
 const Chat = () => {
   const [inputValue, setInputValue] = useState("");
   const [userName, setUserName] = useState("");
+  const [inputDisabled, setInputDisabled] = useState(false);
+
+  const handleNavigate = () => {
+    navigate("/story");
+  };
+
+  const navigate = useNavigate();
+
+  const toggleInput = () => {
+    setInputDisabled((prev) => !prev);
+    console.log("toggleInput");
+  };
 
   const handleNameChange = (e) => {
     setInputValue(e.target.value);
   };
 
   const handleSaveName = () => {
-    const correctedInputValue = inputValue.trim().substring(0, 10);
-    localStorage.setItem("userName", correctedInputValue);
-    setUserName(correctedInputValue);
+    localStorage.setItem("userName", inputValue);
+    setUserName(inputValue);
     setInputValue("");
 
-    handleSendMessage(
-      `My name is ${correctedInputValue}.`,
-      correctedInputValue
-    );
-    handleSendMessage(
-      `What a wonderful name, ${correctedInputValue}!`,
-      "Aria",
-      "left"
-    );
-    handleSendMessage(
-      "As you've realized, our timelines haven’t fully aligned yet, which is why we can’t have a live conversation just yet.",
-      "Aria",
-      "left"
-    );
-    handleSendMessage(
-      `But don’t worry, I’ve managed to transcode some of my diaries so you can tune in to my history.`,
-      "Aria",
-      "left"
-    );
-    handleSendMessage(
-      `And before you go, remember that you can find more information about my universe by following my media.`,
-      "Aria",
-      "left"
-    );
+    setTimeout(() => {
+      handleSendMessage(`My name is ${inputValue}.`, inputValue);
+    }, 200);
 
-    handleSendMessage(
-      <div>
-        <h3>Choose a chapter to start reading:</h3>
-        <Link to="/chapter1">
-          <button>Chapter 1</button>
-        </Link>
-        <Link to="/chapter2">
-          <button>Chapter 2</button>
-        </Link>
-        <Link to="/chapter3">
-          <button>Chapter 3</button>
-        </Link>
-        <Link to="/chapter4">
-          <button>Chapter 4</button>
-        </Link>
-        <Link to="/chapter5">
-          <button>Chapter 5</button>
-        </Link>
-        <Link to="/chapter6">
-          <button>Chapter 6</button>
-        </Link>
-        <Link to="/chapter7">
-          <button>Chapter 7</button>
-        </Link>
-        <Link to="/chapter8">
-          <button>Chapter 8</button>
-        </Link>
-      </div>,
-      "Aria",
-      "left"
-    );
+    setTimeout(() => {
+      simulateTyping(`What a wonderful name, ${inputValue}!`, 1500);
+    }, 1000);
+
+    setTimeout(() => {
+      simulateTyping(
+        "As you've realized, our timelines haven’t fully aligned yet, which is why we can’t have a live conversation just yet.",
+        2000
+      );
+    }, 3500);
+
+    setTimeout(() => {
+      simulateTyping(
+        `But don’t worry, I’ve managed to transcode some of my diaries so you can go directly to read`,
+        1600
+      );
+    }, 7000);
+
+    setTimeout(() => {
+      simulateTyping("I'm disabling the chat feature.", 900);
+    }, 9000);
+
+    setTimeout(() => {
+      toggleInput();
+    }, 1000);
   };
 
   // --------------------------
@@ -88,15 +73,35 @@ const Chat = () => {
       id: Date.now(),
       senderName: messageSender,
       text: messageTxt,
-      time: new Date(Date.now()).toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
       placement: messagePlacement,
     };
     setMessages((prev) => [...prev, newMessageObject]);
     setInputValue("");
   };
+
+  const simulateTyping = (message, delay) => {
+    const typingMessage = {
+      id: "typing",
+      senderName: "ARIA",
+      placement: "left",
+      isTyping: true,
+    };
+    setMessages((prev) => [...prev, typingMessage]);
+
+    setTimeout(() => {
+      setMessages((prev) =>
+        prev
+          .filter((msg) => msg.id !== "typing")
+          .concat({
+            id: Date.now(),
+            senderName: "Aria",
+            text: message,
+            placement: "left",
+          })
+      );
+    }, delay);
+  };
+
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       handleSaveName();
@@ -104,16 +109,38 @@ const Chat = () => {
   };
 
   useEffect(() => {
-    handleSendMessage(
-      `It’s my pleasure to finally meet you. May I ask, how should I address
-        you?`,
-      "Aria",
-      "left"
-    );
+    const storedUserName = localStorage.getItem("userName");
+    if (storedUserName) {
+      setUserName(storedUserName);
+      setInputDisabled(true);
+
+      simulateTyping(
+        `${storedUserName}, I’m just as excited as you are! Though we can’t have a real-time conversation yet.`,
+        1500
+      );
+
+      setTimeout(() => {
+        simulateTyping(
+          "But don’t worry, until that moment arrives, you can explore my diaries and uncover the secrets of my journey.",
+          1600
+        );
+      }, 2500);
+    } else {
+      simulateTyping(
+        `It’s my pleasure to finally meet you. May I ask, how should I address you?`,
+        1200
+      );
+    }
   }, []);
 
   return (
     <>
+      <img
+        className="nav-back"
+        src={navBack}
+        alt="Nav back"
+        onClick={() => navigate("/")}
+      />
       <div className="message-box">
         {messages.map((message) => (
           <div
@@ -130,21 +157,42 @@ const Chat = () => {
               />
               {message.senderName}
             </div>
-            <div>{message.text}</div>
+            <div>
+              {message.isTyping ? (
+                <div className="typing">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              ) : (
+                message.text
+              )}
+            </div>
           </div>
         ))}
 
-        <div className="input-box">
+        <div className={`input-box ${inputDisabled ? "disabled-box" : ""}`}>
           <input
-            className="input"
+            className={`input ${
+              inputDisabled ? "input-disabled" : "input-active"
+            }`}
             type="text"
-            placeholder="type your name"
+            placeholder={
+              inputDisabled
+                ? "Chat function got disabled."
+                : "type your name ....."
+            }
             value={inputValue}
             onKeyDown={handleKeyPress}
             onChange={handleNameChange}
+            disabled={inputDisabled}
+            maxLength={10}
           />
-          <button className="input-button" onClick={handleSaveName}>
-            enter
+          <button
+            className="input-button"
+            onClick={inputDisabled ? handleNavigate : handleSaveName}
+          >
+            {inputDisabled ? "Enter story" : "Enter"}
           </button>
         </div>
       </div>

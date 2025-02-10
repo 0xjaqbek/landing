@@ -5,7 +5,7 @@ import Chat from "./Pages/Chat";
 import Story from "./Pages/Story";
 import NotFound from "./Pages/NotFound";
 
-import backgroundImage1 from "./Asets/background1.png";
+import backgroundImage1 from "./Asets/background1.webp";
 import backgroundImage2 from "./Asets/background2.png";
 
 function App() {
