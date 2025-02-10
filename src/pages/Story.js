@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import usePageVisitTracking from "../CustomHooks/usePageVisitTracking"; // Adjust the import path
 import "./story.css";
 import ariaIcon from "../Asets/ariaChatIcon.png";
+import navUp from "../Asets/navUp.svg";
+import navBack from "../Asets/navBack.svg";
 
 const Story = () => {
   const [currentChapter, setCurrentChapter] = useState("1");
+
+  const navigate = useNavigate();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const changeChapter = (chapter) => {
     setCurrentChapter(chapter);
@@ -128,7 +138,14 @@ End of Chapter 1.
   };
 
   return (
-    <div>
+    <>
+      <img
+        className="nav-back"
+        src={navBack}
+        alt="Nav back"
+        onClick={() => navigate("/")}
+      />
+      <img className="nav-up" src={navUp} alt="Nav up" onClick={scrollToTop} />
       <div className="header">
         {[...Array(8)].map((_, i) => {
           const chapterNumber = (i + 1).toString();
@@ -174,7 +191,7 @@ End of Chapter 1.
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

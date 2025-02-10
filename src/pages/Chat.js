@@ -3,6 +3,7 @@ import "./chat.css";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import navBack from "../Asets/navBack.svg";
 import ariaIcon from "../Asets/ariaChatIcon.png";
 import userIcon from "../Asets/userChatIcon.png";
 
@@ -11,10 +12,11 @@ const Chat = () => {
   const [userName, setUserName] = useState("");
   const [inputDisabled, setInputDisabled] = useState(false);
 
-  const navigate = useNavigate();
   const handleNavigate = () => {
     navigate("/story");
   };
+
+  const navigate = useNavigate();
 
   const toggleInput = () => {
     setInputDisabled((prev) => !prev);
@@ -133,6 +135,12 @@ const Chat = () => {
 
   return (
     <>
+      <img
+        className="nav-back"
+        src={navBack}
+        alt="Nav back"
+        onClick={() => navigate("/")}
+      />
       <div className="message-box">
         {messages.map((message) => (
           <div
