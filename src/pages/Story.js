@@ -69,8 +69,12 @@ const Story = () => {
           <div className="message-header">
             <img className="aria-profile" src={ariaIcon} />
             <p className="title">
-              Chapter {chapters[currentChapter].id} “
-              {chapters[currentChapter].title}”
+              <p className="title-element">
+                Chapter {chapters[currentChapter].id}
+              </p>
+              <p className="title-element">
+                “{chapters[currentChapter].title}”
+              </p>
             </p>
           </div>
           <p className="plot">

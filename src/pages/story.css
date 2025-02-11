@@ -116,8 +116,14 @@
   margin-right: 20px;
 }
 .title {
+  display: flex;
+  flex-wrap: wrap;
   color: #ffffff;
   font-weight: bold;
+}
+.title-element {
+  margin: 4px;
+  text-align: left;
 }
 .plot {
   color: #ffffff;
