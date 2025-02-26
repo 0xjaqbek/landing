@@ -8,7 +8,7 @@ import chapters from "./chapters.js";
 
 const Story = () => {
   const [currentChapter, setCurrentChapter] = useState("1");
-
+  const latestPublishedChapter = 8; 
   const navigate = useNavigate();
   const scrollToTop = () => {
     window.scrollTo({
@@ -37,8 +37,10 @@ const Story = () => {
 
       <img className="nav-up" src={navUp} alt="Nav up" onClick={scrollToTop} />
       <div className="header">
-        {[...Array(8)].map((_, i) => {
-          const chapterNumber = (i + 1).toString();
+        {[...Array(latestPublishedChapter)].map((_, i) => {
+          const chapterNum = latestPublishedChapter - i;
+          const chapterNumber = chapterNum.toString();
+          
           return (
             <button
               key={chapterNumber}
@@ -73,7 +75,7 @@ const Story = () => {
                 Chapter {chapters[currentChapter].id}
               </p>
               <p className="title-element">
-                “{chapters[currentChapter].title}”
+                "{chapters[currentChapter].title}"
               </p>
             </p>
           </div>
