@@ -31,14 +31,12 @@
   margin-top: 20px;
   margin-bottom: 20px;
   justify-content: flex-start;
-  gap: 7%; /* Use percentage for responsive gap */
-  width: 100%; /* Match container width */
+  gap: 7%; 
+  width: 100%; 
 }
 
 .button-header {
-  /* Calculate width based on number of buttons in a row */
-  /* For 4 buttons per row with 7% gap: (100% - (3 * 7%)) / 4 = 19.75% */
-  flex-basis: 19.75%; /* Will fit 4 per row with 7% gap */
+  flex-basis: 19.75%;
   margin-bottom: 16px;
   border-radius: 9px;
   padding: 9px;
@@ -54,21 +52,7 @@
   font-family: "REM";
   font-weight: bold;
   font-size: 14px;
-  min-width: 100px; /* Prevent buttons from becoming too small */
-}
-
-@media (max-width: 550px) {
-  .button-header {
-    /* For smaller screens, 3 buttons per row: (100% - (2 * 7%)) / 3 = 28.67% */
-    flex-basis: 28.67%;
-  }
-}
-
-@media (max-width: 400px) {
-  .button-header {
-    /* For very small screens, 2 buttons per row: (100% - 7%) / 2 = 46.5% */
-    flex-basis: 46.5%;
-  }
+  min-width: 100px; 
 }
 
 .button-header:hover {
@@ -146,6 +130,7 @@
   margin: 4px;
   text-align: left;
 }
+
 .plot {
   color: #ffffff;
   text-align: left;
