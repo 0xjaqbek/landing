@@ -8,7 +8,7 @@ import chapters from "./chapters.js";
 
 const Story = () => {
   const [currentChapter, setCurrentChapter] = useState("1");
-  const publishedChapters = [1]; 
+  const publishedChapters = [6, 5, 4, 3, 2, 1]; 
   const navigate = useNavigate();
   const scrollToTop = () => {
     window.scrollTo({
