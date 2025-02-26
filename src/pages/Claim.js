@@ -16,7 +16,7 @@ const Claim = () => {
       />
       <div className="plot-big-cointerner">
         <div className="plot-cointerner">
-          <h1 className="title">I love Aria</h1>
+
           <p className="plot">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
           </p>
