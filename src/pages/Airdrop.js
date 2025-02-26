@@ -16,9 +16,9 @@ const Airdrop = () => {
       />
       <div className="plot-big-cointerner">
         <div className="plot-cointerner">
-          <h1 className="title">AIRDROP</h1>
+          <h1 className="title">Aria I love U </h1>
           <p className="plot">
-            Discover exclusive airdrop opportunities in Aria Ingram's expansive digital realm.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
           </p>
         </div>
       </div>
