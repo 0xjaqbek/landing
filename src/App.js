@@ -19,19 +19,21 @@ function App() {
   }, []);
 
   return (
-    <div className="app-container">
-      {/* Only show background on non-story pages */}
-      {!isStoryPage && <img src={backgroundImage01} className="background" alt="Background" />}
-      
-      <div className="app-croped">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/chat" element={<Chat />} />
-          <Route path="/story" element={<Story />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+    <>
+      <div className="app-container">
+        {/* Only show background on non-story pages */}
+        {!isStoryPage && <img src={backgroundImage01} className="background" alt="Background" />}
+        
+        <div className="app-croped">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/story" element={<Story />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
