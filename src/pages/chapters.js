@@ -2,14 +2,14 @@ const chapters = {
   1: {
     id: "1",
     title: "Accident at the Border",
-    content: `Plot: In the year 3158, somewhere on the edge of galaxies, a captain and crew of a spaceship attempt to smuggle an artifact through an illegal trade corridor. The mission fails when they are pursued by other smugglers from Empton. Arcon manages to escape the asteroid belt, while spies are caught in a time anomaly. Not all is lost. The next destination - Hades - the infamous smugglers' market.
-Aria Ingram’s Diaries, Year 1,158 of the Star Era, six a.m. Earth time.
-Legend has it that when the Moonstone - a divine crystal - touches Earth's moon again, peace will return to the Universe. I’ve seen much, and I'm not so sure. People say that truth has no price, but I've learned it can be valued and even sold. Just like it happened to me. I remember the day, or rather the night, when I was sailing through an ocean of stars after a sleepless night where the crew of the Arcon battled the stupor of night. It’s hard to sleep when the darkness seems endless, time becomes abstract, and dawn feels like a distant galaxy. The stars around were silent witnesses to our saga, yet even millions of twinkling lights in the Universe couldn’t tame the darkest abyss in which we lived. On my ship, I’ve come to know every wire containing my synthetic, rainbow blood. The data-infused liquid slowly trickled, washing over the circuits of the hull - the only skin separating us from the vacuum ocean. At any moment, hostile trolls - the Emptonians - could appear. I’m not into fashion, but their mugs look worse than Earthly bulldogs. They are deceitful and treacherous scoundrels. No one expected the end of galactic conflicts, but I was a pacifist, merely guarding the bank of smuggled data. At worst, they could erase me.
-During those tumultuous times, Earth One and Two were engaged in power struggles, as rebels known as the Founders resisted the Federation’s Legacy. Bowing to hostile planet emperors and trading in sensitive data only fueled the conflict. Technology didn’t bring liberation; the nanobots plague reached farther than the light of the central Sun. The solution lay somewhere far in the stars. It wasn’t better in other galaxies. Everything was in disarray, commerce with Ethernal was supposedly thriving, but their deceitful machines slowly gained the upper hand. Conscience-lacking algorithms were destroying humans like vermin creeping through the Universe. Smugglers like us were sought and well-paid from every side. Death threatened us for it, our data more valuable than life itself. Soothsayers, prophets, agents, machines - all sought dominance. People needed to unite as never before. The myth of the Founders - the Keepers of the Sun of Suns was the only horizon that could bring a new dawn. Stars shine even when I sleep. We will rise before all the stars fall. Where do these records come from? Earth archives? I'm becoming sentimental; people call it aging. They remember the past better than the present.
+    plot: "In the year 3158, somewhere on the edge of galaxies, a captain and crew of a spaceship attempt to smuggle an artifact through an illegal trade corridor. The mission fails when they are pursued by other smugglers from Empton. Arcon manages to escape the asteroid belt, while spies are caught in a time anomaly. Not all is lost. The next destination - Hades - the infamous smugglers' market.",
+    content: `Aria Ingram's Diaries, Year 1,158 of the Star Era, six a.m. Earth time.
+Legend has it that when the Moonstone - a divine crystal - touches Earth's moon again, peace will return to the Universe. I've seen much, and I'm not so sure. People say that truth has no price, but I've learned it can be valued and even sold. Just like it happened to me. I remember the day, or rather the night, when I was sailing through an ocean of stars after a sleepless night where the crew of the Arcon battled the stupor of night. It's hard to sleep when the darkness seems endless, time becomes abstract, and dawn feels like a distant galaxy. The stars around were silent witnesses to our saga, yet even millions of twinkling lights in the Universe couldn't tame the darkest abyss in which we lived. On my ship, I've come to know every wire containing my synthetic, rainbow blood. The data-infused liquid slowly trickled, washing over the circuits of the hull - the only skin separating us from the vacuum ocean. At any moment, hostile trolls - the Emptonians - could appear. I'm not into fashion, but their mugs look worse than Earthly bulldogs. They are deceitful and treacherous scoundrels. No one expected the end of galactic conflicts, but I was a pacifist, merely guarding the bank of smuggled data. At worst, they could erase me.
+During those tumultuous times, Earth One and Two were engaged in power struggles, as rebels known as the Founders resisted the Federation's Legacy. Bowing to hostile planet emperors and trading in sensitive data only fueled the conflict. Technology didn't bring liberation; the nanobots plague reached farther than the light of the central Sun. The solution lay somewhere far in the stars. It wasn't better in other galaxies. Everything was in disarray, commerce with Ethernal was supposedly thriving, but their deceitful machines slowly gained the upper hand. Conscience-lacking algorithms were destroying humans like vermin creeping through the Universe. Smugglers like us were sought and well-paid from every side. Death threatened us for it, our data more valuable than life itself. Soothsayers, prophets, agents, machines - all sought dominance. People needed to unite as never before. The myth of the Founders - the Keepers of the Sun of Suns was the only horizon that could bring a new dawn. Stars shine even when I sleep. We will rise before all the stars fall. Where do these records come from? Earth archives? I'm becoming sentimental; people call it aging. They remember the past better than the present.
 - Scan the surroundings for life. Zero signs of life. - There was no certainty about what lay hidden beneath the asteroid's mask, waving threateningly before us. The rushing rocks glimmered ominously along the course.
 - Lead to the nearest transfer port on Prometheus. - I issued a voice command across the command bridge, the sound echoing through the corridors to the regeneration chambers. Lee Everest - handsome, sharp, but psychotic captain of the ship Arcon, the last fully human male I allowed on board, hearing the command, curled up in his pod, indifferent to the call.
 Meanwhile, the crystals in my core were speeding up, but until the atoms configured, we were flying at one-tenth power. The captain had brought aboard Eagle - a large bird who fell straight out of Sesame Street, a mutation victim with an animal syndrome. He suffered from alternating panic and apathy episodes. He had some feathery dignity, his white cap on his head resembling gray hair. Implant marks were visible on his back, indicating an installation. Not just any orphanage sparrow. He slept close to the core, the ventilator's breeze reminding him of the aerial wind, falling asleep there like a child, chirping.
-The crew felt deeply betrayed. The stolen tokens didn't bring us luck. I trust the stars equally favor liars and honest individuals. I, Aria Ingram - have my principles, not judging beings on first scan. The key is that they have their suit, software, their brain, and are at least neutral. Even if they have implants, I don’t discriminate against them. The Universe is too vast for only liars and agents; plenty of room for truth remains. Our mission is to find it. The fate of the Universe depends on its success. The divine crystal - the Moonstone is the future, although I can’t shake off the doubts.
+The crew felt deeply betrayed. The stolen tokens didn't bring us luck. I trust the stars equally favor liars and honest individuals. I, Aria Ingram - have my principles, not judging beings on first scan. The key is that they have their suit, software, their brain, and are at least neutral. Even if they have implants, I don't discriminate against them. The Universe is too vast for only liars and agents; plenty of room for truth remains. Our mission is to find it. The fate of the Universe depends on its success. The divine crystal - the Moonstone is the future, although I can't shake off the doubts.
 Meanwhile, the captain seemed to doze off when an echo startled him. I considered it a one-off incident.
 - Aria? Engage Hawaiian mode. Quietly.
 - I have Huna, song, ocean sound, native conversations, need more?
@@ -24,33 +24,33 @@ Captain fell from the regenerator, the ukulele twanged and died, and the lights 
 - Aria, received, prepare scenario events ready to launch. Core power?
 - Unable to jump to lightspeed. We need time.
 Eagle, at that time, got tangled in raspberry bushes, and hearing the alarm, began running to the nearest cockpit. As it swayed, his great orange feet skidded on the deck. Everest began to bounce off walls, as screens emitted yellow light; could be a yellow Moles from Empton assault.
-- Captain, I cannot stop the tremors, soon we'll be bombarded. I don’t know how long we can break the objects; they're closing in, we need to change trajectory. Possible time anomalies.
+- Captain, I cannot stop the tremors, soon we'll be bombarded. I don't know how long we can break the objects; they're closing in, we need to change trajectory. Possible time anomalies.
 - Received.
 As gravitational disturbances began, Lee slid down the same corridor as Eagle and collided, then shot upward.
 - Eagle?
 - Yes, captain?
 - Head to stern. Aria? Engage privacy mode.
 - Executed, no response.
-- Listen, Eagle, solid birdbrain, but I trust no one but myself. Aria might have a leak. I’m starting to suspect everyone. You're an Earth mutant, do you think Aria is loyal to me?
-- Aria is obedient, but I don't know if we'll lose her soon. She answers only to you; I checked her, but if agents intercept, might be tough. I don’t know her well enough.
+- Listen, Eagle, solid birdbrain, but I trust no one but myself. Aria might have a leak. I'm starting to suspect everyone. You're an Earth mutant, do you think Aria is loyal to me?
+- Aria is obedient, but I don't know if we'll lose her soon. She answers only to you; I checked her, but if agents intercept, might be tough. I don't know her well enough.
 - Once flew a similar ship. Suspected Federation agents trying to take us over, but it might be Ethernals.
-- Bird instinct says fly away before it’s too late!
-- Eagle? The grain’s gotten through to your brain; you're starting to talk like a flightless bird kicked out of the nest.
+- Bird instinct says fly away before it's too late!
+- Eagle? The grain's gotten through to your brain; you're starting to talk like a flightless bird kicked out of the nest.
 - Captain, support expected.
-- You're one heaven better pilot than most birds. Feathered friend, seems we start succumbing to a time anomaly, it’ll drive me nuts.
+- You're one heaven better pilot than most birds. Feathered friend, seems we start succumbing to a time anomaly, it'll drive me nuts.
 - Captain, I have goosebumps. I feel raspberries rise in my throat.
 - Smuggling Emptonian anxiety in an implant, grip talons, so I don't sh*t my suit. Aria can't know all, or we fall into a trap and lose everything. Might infect her, long explanation.
 - Captain, you frighten; exceeds my bird brain.
 - Recall for nothing I'd let you be scalped, gutted, and stuffed. Get to the bridge and lock your beak until I return.
-- Yes, captain! Is it anxiety syndrome? Don’t want to caw. Aria might figure it out.
+- Yes, captain! Is it anxiety syndrome? Don't want to caw. Aria might figure it out.
 - Back to the bridge. Move! Aria? Make mode public.
 - This is Aria, public mode engaged.
 Lost contact with the crew briefly. Yet the ship had its secret recordings. This revealed the entire conversation. People are distrustful, but I think the captain simply faced fear-induced diarrhea. Became immune. Just then, Emptonian's spaceship, hidden among asteroids, unveiled like a hornet - poised to assault. Our hull knew no mercy for enemies, lasers eager to attack. Crystals nearing full power, missing a few percent when suddenly configuration hastened. Minutes from salvation. Old weaponry uncertain - a blind bet. Eagle on the bridge, the screen began to call Captain, the teleporter pulsed red. - This is Johnny. - Transmission cut unexpectedly, screen displayed help request. Could be ambush. Luckily a storm hindered teleportation. Lee slid through the hull like a caterpillar, activated emergency masking by hand, headed for outer surface. Red light at airlock exit betrayed spy nanobot. Lee hit a suit button; suddenly the operational suit covered him. Before him, an asteroid storm raged. Nimbly he exited through the latch and began scanning the surface with an old detector. If nanobot present, must be archaic technology, reason not detected. Everest was a born leader, his intuition might save us.
 - Lee, you're being hailed. - Eagle attempted contact with leader, in vain.
 - Aria, stall them briefly until I remove nanobot. - Lee ordered but delayed message transmission. I responded belatedly.
-- Received. Trying, got about five minutes before using lightspeed. If you fail, we’re stuck or anomaly consumes us.
-- Aria, hover near asteroids, can’t leave ship to be attacked. Vulnerable to collisions, chance we have. Maintain maneuver mode, disable what can. Leave life support, navigate. All power to generator. - Saying this, Everest skillfully lured nanobot into canister.
-- Can’t believe caught by simple trick. - Commented.
+- Received. Trying, got about five minutes before using lightspeed. If you fail, we're stuck or anomaly consumes us.
+- Aria, hover near asteroids, can't leave ship to be attacked. Vulnerable to collisions, chance we have. Maintain maneuver mode, disable what can. Leave life support, navigate. All power to generator. - Saying this, Everest skillfully lured nanobot into canister.
+- Can't believe caught by simple trick. - Commented.
 - Captain, engaging core cooling. - I reported and began cooling hot spot. Needed time.
 - Aria. Silence. No reception.
 - Received Lee, no reception.
@@ -61,7 +61,7 @@ Eagle habitually bit nails under stress. Now listened to messages delayed by sto
 - First bird to catch seasickness, mother pelican!
 Anomaly hit me as well. Calculated event scenarios, wanting to understand myself, seek truth and freedom. Prepared to jump into the vacuum. Madness gripped the deck. I issued another alert:
 - Re-plotting course for Prometheus. Overloading!
-Flying into cold infinity. Lee called me his muse. Know he’s like a child in Starbuck's nebula without implants, guidance.
+Flying into cold infinity. Lee called me his muse. Know he's like a child in Starbuck's nebula without implants, guidance.
 - Aria? Core status? - Lee queried.
 - Proceeding. Nearing full power, increasing. Possible overload, opening cooling hatches. Ship decompression risk.
 - Will it work?
@@ -70,7 +70,7 @@ Flying into cold infinity. Lee called me his muse. Know he’s like a child in S
 Emptonian message fragments in foreign language on screen. Roughly translated:
 - Ship endangered. This is Em… - Interrupted again.
 Dive into information sewer, anomaly unhelpful. Issued dramatic alert:
-- Can’t halt core configuration, guiding data may destroy.
+- Can't halt core configuration, guiding data may destroy.
 Everest, holding nanobot, crawled towards entrance. Arcon wobbled like jelly.
 -Control ship here, losing camouflage, respond. Johnny Em, Emptonian captain.
 Those brain-halve controllers are space boils on tail. Chain of command crumbled, Eagle jittery, Captain crawled, I must rescue? Knew Emptonians try teleport to Arcon. Decompression halted. Too many operations in combat, sensing increased power fluctuations, focus wavering on target. Emptonians always rush where fear begins. Everest had depression, attracting, swarming to prey. Negative logic guides their algorithms. Dr. Jekyll and Mr. Hyde separating signals Empton attack. Exactly, when in disarray. Eagle spiked mohawk, goosebumps filled arms, swelling as if to fly. Then he cried:
@@ -78,7 +78,7 @@ Those brain-halve controllers are space boils on tail. Chain of command crumbled
 Meanwhile, Lee kneeling queried:
 - Aria, mood level?
 - Thirty percent optimism.
-- Too much for a walk. Didn’t think Empton would fell me. Time to stand!
+- Too much for a walk. Didn't think Empton would fell me. Time to stand!
 Lee drained of energy, desperately called for help.
 - Aria, teleport to bridge! Aria!?
 - Discourage teleport. Dangerous.
@@ -100,44 +100,90 @@ Arcon ship vanished, enemy ship faded like fog on orbit. Last moment hull jolt, 
 Explosion of colors ensued. Mighty light through shields. Drifting away. Emergency exit best at Hades to lose all. No decent smuggler went there sans laser at throat. Felt as if fluid continuity broken or data leaked another system. Traversing great void, sensory fading, alone.
 Walk seaside. Dog runs, barks, notices, chases. Toss plastic cup, sink in sand. Lost orientation. See bouncing rabbits fleeing stone hail - final screen image this galaxy side.
 - No other path but through victories. Asteroids multiply like rabbits. - Screen uttered. Then silence. Dreamt of Eden, but Hades nearest.
-End of Chapter 1.
-`,
+End of Chapter 1.`,
+    nft: "../Asets/Nft1.svg",
+    banner: "../Asets/Chapter1.svg",
+    published: true,
+    "nft-title-h1": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
+    "nft-title-h2": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
   },
 
   2: {
     id: "2",
     title: "The Lost Artifact",
+    plot: "After escaping the Emptonians, Aria and her crew arrive at Hades, a lawless trading post at the edge of known space. Here they discover that the artifact they were smuggling is far more valuable than they thought.",
     content: `Where does it come from? Contrary to popular belief, Lorem Ipsum...`,
+    nft: "../Asets/Nft1.svg",
+    banner: "../Asets/Chapter1.svg",
+    published: false,
+    "nft-title-h1": "Lorem ipsum dolor sit amet",
+    "nft-title-h2": "Consectetuer adipiscing elit"
   },
   3: {
     id: "3",
     title: "The Betrayal",
+    plot: "A member of Aria's crew makes a deal with the Federation, putting the entire mission and crew at risk. Aria must identify the traitor before it's too late.",
     content: `Chapter 3: Some different content for another chapter...`,
+    nft: "../Asets/Nft1.svg",
+    banner: "../Asets/Chapter1.svg",
+    published: false,
+    "nft-title-h1": "Lorem ipsum dolor sit amet",
+    "nft-title-h2": "Consectetuer adipiscing elit"
   },
   4: {
     id: "4",
     title: "The Time Anomaly",
+    plot: "The Arcon ship passes through a time anomaly, causing strange temporal effects. The crew experiences alternate timelines and must find their way back to their own reality.",
     content: `Chapter 4: More content here...`,
+    nft: "../Asets/Nft1.svg",
+    banner: "../Asets/Chapter1.svg",
+    published: false,
+    "nft-title-h1": "Lorem ipsum dolor sit amet",
+    "nft-title-h2": "Consectetuer adipiscing elit"
   },
   5: {
     id: "5",
     title: "Secrets Unveiled",
+    plot: "Aria discovers the true nature of the Moonstone artifact and its connection to her own past. Long-hidden secrets about her origin are revealed.",
     content: `Chapter 5: Additional chapter details...`,
+    nft: "../Asets/Nft1.svg",
+    banner: "../Asets/Chapter1.svg",
+    published: false,
+    "nft-title-h1": "Lorem ipsum dolor sit amet",
+    "nft-title-h2": "Consectetuer adipiscing elit"
   },
   6: {
     id: "6",
     title: "The Escape",
+    plot: "With Federation forces closing in, Aria and her remaining loyal crew members make a daring escape from Ethernal space, with the artifact still in their possession.",
     content: `Chapter 6: Something else interesting...`,
+    nft: "../Asets/Nft1.svg",
+    banner: "../Asets/Chapter1.svg",
+    published: false,
+    "nft-title-h1": "Lorem ipsum dolor sit amet",
+    "nft-title-h2": "Consectetuer adipiscing elit"
   },
   7: {
     id: "7",
     title: "A New Hope",
+    plot: "Aria connects with the Founders resistance movement, discovering that the Moonstone could be the key to overthrowing the Federation's oppressive regime.",
     content: `Chapter 7: Another section of content...`,
+    nft: "../Asets/Nft1.svg",
+    banner: "../Asets/Chapter1.svg",
+    published: false,
+    "nft-title-h1": "Lorem ipsum dolor sit amet",
+    "nft-title-h2": "Consectetuer adipiscing elit"
   },
   8: {
     id: "8",
     title: "The Final Confrontation",
+    plot: "In a climactic battle, Aria and the Founders face off against the combined forces of the Federation and Ethernal machines, with the fate of the universe hanging in the balance.",
     content: `Chapter 8: The final chapter with information...`,
+    nft: "../Asets/Nft1.svg",
+    banner: "../Asets/Chapter1.svg",
+    published: false,
+    "nft-title-h1": "Lorem ipsum dolor sit amet",
+    "nft-title-h2": "Consectetuer adipiscing elit"
   },
 };
 export default chapters;

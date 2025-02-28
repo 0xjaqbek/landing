@@ -1,15 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./story.css";
 import ariaIcon from "../Asets/ariaChatIcon.png";
-import navUp from "../Asets/navUp.svg";
-import navBack from "../Asets/navBack.svg";
-import chapters from "./chapters.js";
+import StoryHeader from "./StoryHeader";
+import chapters from "./chapters";
+// Direct import of the banner and NFT images to ensure they load
+import Chapter1Banner from "../Asets/Chapter1.svg";
+import Nft1Image from "../Asets/Nft1.svg";
 
 const Story = () => {
   const [currentChapter, setCurrentChapter] = useState("1");
-  const latestPublishedChapter = 8; 
+  const contentRef = useRef(null);
+  
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    // Add class to body for story-specific styling
+    document.body.classList.add('story-page');
+    
+    // Remove class when component unmounts
+    return () => {
+      document.body.classList.remove('story-page');
+    };
+  }, []);
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -19,66 +33,71 @@ const Story = () => {
 
   const changeChapter = (chapter) => {
     setCurrentChapter(chapter);
-    console.log("Current chapter: " + currentChapter);
+    scrollToTop();
   };
 
   const mint = (chapter) => {
     window.open(`https://example.com/${chapter}`, "_blank");
   };
 
+  // Get banner image source
+  const getBannerSrc = () => {
+    if (currentChapter === "1") {
+      return Chapter1Banner;
+    }
+    return chapters[currentChapter].banner;
+  };
+  
+  // Get NFT image source
+  const getNftSrc = () => {
+    if (currentChapter === "1") {
+      return Nft1Image;
+    }
+    return chapters[currentChapter].nft;
+  };
+
   return (
     <>
-      <img
-        className="nav-back"
-        src={navBack}
-        alt="Nav. back"
-        onClick={() => navigate("/")}
+      <StoryHeader 
+        scrollToTop={scrollToTop} 
+        currentChapter={currentChapter} 
+        chapterTitle={chapters[currentChapter].title} 
+        onChangeChapter={changeChapter}
       />
-
-      <img className="nav-up" src={navUp} alt="Nav up" onClick={scrollToTop} />
-      <div className="header">
-        {[...Array(latestPublishedChapter)].map((_, i) => {
-          const chapterNum = latestPublishedChapter - i;
-          const chapterNumber = chapterNum.toString();
-          
-          return (
-            <button
-              key={chapterNumber}
-              className={`button-header ${
-                currentChapter === chapterNumber ? "active" : ""
-              }`}
-              onClick={() => changeChapter(chapterNumber)}
-            >
-              CHAPTER {chapterNumber}
+      
+      {/* Full width banner */}
+      <div className="banner-container">
+        <img 
+          src={getBannerSrc()} 
+          alt={`Chapter ${currentChapter} banner`} 
+          className="banner-img" 
+        />
+      </div>
+      
+      <div className="nft-container">
+        <div className="nft-content">
+          <img 
+            src={getNftSrc()} 
+            alt={`Chapter ${currentChapter} NFT`} 
+            className="nft-img" 
+          />
+          <div className="nft-text-container">
+            <h1 className="nft-title-h1">{chapters[currentChapter]["nft-title-h1"]}</h1>
+            <h2 className="nft-title-h2">{chapters[currentChapter]["nft-title-h2"]}</h2>
+            <button className="mint-button" onClick={() => mint(currentChapter)}>
+              Buy NOW
             </button>
-          );
-        })}
-      </div>
-      <div className="baner">
-        <p className="banner-header">What is Lorem Ipsum?</p>
-        <p className="banner-text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an
-        </p>
-        <img className="banner-img" />
-        <button className="banner-button" onClick={() => mint(currentChapter)}>
-          MINT
-        </button>
-      </div>
-      <div className="plot-big-cointerner">
-        <div className="plot-cointerner">
-          <div className="message-header">
-            <img className="aria-profile" src={ariaIcon} />
-            <p className="title">
-              <p className="title-element">
-                Chapter {chapters[currentChapter].id}
-              </p>
-              <p className="title-element">
-                "{chapters[currentChapter].title}"
-              </p>
-            </p>
           </div>
+        </div>
+      </div>
+      
+      <div className="plot-big-container" ref={contentRef}>
+        <div className="plot-container">
+          
+          <p className="plot-summary">
+            {chapters[currentChapter].plot}
+          </p>
+          
           <p className="plot">
             {chapters[currentChapter].content.split("\n").map((line, index) => (
               <React.Fragment key={index}>

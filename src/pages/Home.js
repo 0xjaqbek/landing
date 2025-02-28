@@ -5,6 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 import ariaProfile from "../Asets/ariaProfile.png";
 import frame from "../Asets/frame.svg";
+import SocialIconsX from "../Asets/SocialIconsX.svg";
+import SocialIconsTelegram from "../Asets/SocialIconsTelegram.svg";
+import SocialIconsTT from "../Asets/SocialIconsTT.svg";
+import Manifold from "../Asets/manifold.svg";
 
 function Home() {
   const [userName, setUserName] = useState(false);
@@ -30,16 +34,35 @@ function Home() {
   return (
     <>
       <div className="landing-page">
+        {/* Small Header moved outside topGroup for better visibility */}
+        <div className="small-header-main">
+          <div className="small-header-title">
+            ARIA INGRAM'S DIARIES
+          </div>
+          <div className="social-icons">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+              <img src={SocialIconsX} alt="X" className="social-icon" />
+            </a>
+            <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
+              <img src={SocialIconsTelegram} alt="Telegram" className="social-icon" />
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+              <img src={SocialIconsTT} alt="TikTok" className="social-icon" />
+            </a>
+            <a href="https://manifold.markets" target="_blank" rel="noopener noreferrer">
+              <img src={Manifold} alt="Manifold" className="social-icon" />
+            </a>
+          </div>
+        </div>
+        
         <div className="topGroup">
           <img className="ariaProfile" src={ariaProfile} alt="ariaProfile" />
           <div className="frameContainer">
             <div className="headerTxt">
               {userName ? (
                 <p className="line">
-                  <p className="line">
-                    Hello, {userName}! <br />
-                    Good to see you again.
-                  </p>
+                  Hello, {userName}! <br />
+                  Good to see you again.
                 </p>
               ) : (
                 <p className="line">

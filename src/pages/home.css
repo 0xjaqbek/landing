@@ -1,10 +1,10 @@
 .landing-page {
-  height: 100%;
-
+  min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Changed from center */
+  
 }
 
 .topGroup {
@@ -12,22 +12,69 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
+  margin-bottom: 1px; /* Add some space below */
 }
 
+/* Small Header Styles */
+.small-header-main {
+  height: 27px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px; /* Increased margin */
+}
+
+.small-header-title {
+  width: 65%;
+  text-align: left;
+  font-family: 'REM', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #00ffff;
+  text-transform: uppercase;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 2px;
+}
+
+.social-icons {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icon {
+  height: 20px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+/* End Small Header Styles */
+
 .ariaProfile {
-  margin-top: 30px;
-  width: 232px;
-  /* height: 371px; */
+  width: 100%;
+  max-width: 232px;
+  max-height: min(40vh, 300px); /* Responsive height */
+  object-fit: contain;
+  margin-top: 5px; /* Reduced margin */
+  margin-bottom: 5px; /* Added margin */
 }
 
 .frameContainer {
-  margin-top: -15px;
-  margin-bottom: 30px;
+  margin-top: -15px; /* Changed from -15px */
+  margin-bottom: 10px;
   position: relative;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
 }
+
 .frame {
   width: 90%;
   z-index: 1;
@@ -36,14 +83,11 @@
 
 .headerTxt {
   margin-top: 0px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   height: 100%;
   width: 80%;
-
   color: #ffffff;
   text-align: center;
   position: absolute;
@@ -52,13 +96,13 @@
   transform: translate(-50%, -50%);
   z-index: 2;
 }
+
 .line {
   margin: 0px;
   color: #ffffff;
   font-family: "REM";
   font-weight: bold;
-  font-size: 24px;
-  font-size: clamp(14px, 4.2vw, 24px);
+  font-size: clamp(8px, 3vw, 20px); /* More responsive text */
   text-transform: uppercase;
 }
 
@@ -67,31 +111,66 @@
 }
 
 .button {
-  padding: 20px;
-  margin-bottom: 30px;
+  padding: 15px 20px; /* Adjusted padding */
+  margin-bottom: 15px;
   border-radius: 20px;
-
   background-color: #001626;
   filter: drop-shadow(0px 0px 16px rgba(0, 255, 255, 0.5));
-
   border: 1px #00ffff solid;
   color: #00ffff;
-
   font-family: "REM";
   font-weight: bold;
-  font-size: 28px;
-  font-size: clamp(14px, 4.2vw, 24px);
+  font-size: clamp(18px, 3vw, 20px);
+  min-width: 150px; /* Added min-width */
 }
 
 .button2 {
   border: 1px #ffa12b solid;
   color: #ffa12b;
-  margin-bottom: 70px;
+  margin-bottom: 30px; /* Reduced from 70px */
 }
+
 button:hover {
   background-color: rgba(0, 255, 255, 0.1);
-
   cursor: pointer;
   transform: scale(0.99);
   transition: 0.1s;
+}
+
+/* Media queries for better responsiveness */
+@media (max-height: 700px) {
+  .landing-page {
+    justify-content: flex-start;
+    padding-top: 5px;
+  }
+  
+  .ariaProfile {
+    max-height: 30vh;
+  }
+  
+  .button, .button2 {
+    padding: 10px 15px;
+    margin-bottom: 15px;
+  }
+  
+  .button2 {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-height: 800px) {
+  .landing-page {
+    justify-content: center;
+  }
+}
+
+/* Ensure SmallHeader is always visible at the top on any screen size */
+@media (max-width: 400px) {
+  .small-header-title {
+    font-size: 12px;
+  }
+  
+  .social-icon {
+    height: 16px;
+  }
 }

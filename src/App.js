@@ -1,19 +1,29 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
-import Chat from "./Pages/Chat";
-import Story from "./Pages/Story";
-import NotFound from "./Pages/NotFound";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Home from "./pages/Home";
+import Chat from "./pages/Chat";
+import Story from "./pages/Story";
+import NotFound from "./pages/NotFound";
 
-import backgroundImage1 from "./Asets/background1.webp";
-import backgroundImage2 from "./Asets/background2.png";
+import backgroundImage01 from "./Asets/background01.svg";
 
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const location = useLocation();
+  const isStoryPage = location.pathname === "/story";
+
+  useEffect(() => {
+    // This will run when the app is opened/mounted
+    setIsLoaded(true);
+  }, []);
+
   return (
     <>
       <div className="app-container">
-        <img src={backgroundImage1} className="background"></img>
-        <img src={backgroundImage2} className="background background2"></img>
+        {/* Only show background on non-story pages */}
+        {!isStoryPage && <img src={backgroundImage01} className="background" alt="Background" />}
+        
         <div className="app-croped">
           <Routes>
             <Route path="/" element={<Home />} />
